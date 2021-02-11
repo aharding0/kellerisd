@@ -174,3 +174,12 @@ label>span
   color: #0;
 }
 }
+@media (min-width: 801px) {
+input[type="submit"]
+  {
+    width: 90%;
+  }
+  select{
+  width: 15%;
+}
+}
