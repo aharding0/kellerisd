@@ -59,7 +59,7 @@ label>span{
   margin-top: 12px;
   padding-right: 10px;
 }
-input[type="text"], input[type="tel"], input[type="email"], select
+input[type="text"], input[type="time"], input[type="email"], select
 {
   width: 70%;
   height: 30px;
@@ -109,6 +109,19 @@ p{
 }
 .Yorder>div{
   padding: 15px 0; 
+}
+
+input[type="submit"]
+{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #52ad9c;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .button{
