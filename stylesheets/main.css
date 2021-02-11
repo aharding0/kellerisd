@@ -95,12 +95,13 @@ th{
   padding: 10px 0;
 }
 tr>td:nth-child(1){
-  text-align: left;
-  color: #2d2d2a;
+  text-align: center;
+  color: #FF0000;
 }
 tr>td:nth-child(2){
-  text-align: right;
-  color: #52ad9c;
+  text-align: center;
+  color: #d4af37
+;
 }
 td{
   border-bottom: 1px solid #dadada;
@@ -130,6 +131,15 @@ input[type="submit"]
   font-weight: bold;
   margin-left: 10px;
 }
+
+input[type="checkbox"]
+{
+  width:24px;
+  height:24px;
+  position:relative;
+  top:-40px
+}
+
 
 .button{
   width: 50%;
