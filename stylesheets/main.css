@@ -18,6 +18,15 @@ body{
   margin-right: auto;
   margin-left: auto;
 }
+
+@media screen and (min-width:400px) 
+{
+    input[type="submit"]
+    {
+    width: 80%;
+    }
+}
+
 @media (min-width: 1200px)
 {
   .container{
