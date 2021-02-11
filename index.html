@@ -16,8 +16,22 @@
     <input type="text" name="entry.209718426" id="entry.209718426" maxlength="7" size="7" required>
     </label>
     <label>
+    <span class="seltime">Beverage: <span class="required">*</span></span>
+  <select name="entry.559691299" id="entry.559691299" required>
+  <option disabled selected value> ----- </option> 
+  <option value="sprite">Sprite</option>
+  <option value="coke">Coke</option>
+  </select>
+    </label>
+    <label>
+      <input type="checkbox" id="entry.1907606841" name="entry.1907606841" value="Cherry">
+  <label for="cherry">Cherry</label>
+  <input type="checkbox" id="entry.1907606841" name="entry.1907606841" value="Vanilla">
+  <label for="vanilla">Vanilla</label>
+    </label>
+    <label>
     <span class="seltime">Pickup Time: <span class="required">*</span></span>
-  <select name="pickup" id="pickup" required>
+  <select name="entry.1689537772" id="entry.1689537772" required>
   <option disabled selected value> ----- </option> 
   <option value="8a">8:00 AM</option>
   <option value="815a">8:15 AM</option>
@@ -40,6 +54,10 @@
   <option value="1230a">12:30 PM</option>
   <option value="1245a">12:45 PM</option>
   </select>
+    </label>
+    <label>
+    <span class="notes">Notes to the barristas: <span class="required">*</span></span>
+    <input type="text" name="entry.1192852428" id="entry.1192852428" maxlength="40" size="40" required>
     </label>
     <input type="submit" value="Submit Order">
   </form>
