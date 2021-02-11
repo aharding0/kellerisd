@@ -65,7 +65,7 @@ input[type="text"], input[type="time"], input[type="email"], select
   height: 30px;
   padding: 5px 10px;
   margin-bottom: 10px;
-  border: 1px solid #dadada;
+  border: 1px solid #c19f5f;
   color: #888;
 }
 select{
