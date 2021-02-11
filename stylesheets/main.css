@@ -177,7 +177,7 @@ label>span
 @media (min-width: 801px) {
 input[type="submit"]
   {
-    width: 90%;
+    width: 50%;
   }
   select{
   width: 15%;
