@@ -19,21 +19,6 @@ body{
   margin-left: auto;
 }
 
-@media screen and (min-width:400px) 
-{
-    label>span
-  {
-  float: left;
-    width: 17%;
-    margin-top: 12px;
-    padding-right: 100px;
-  }
-  input[type="submit"]
-  {
-    width: 90%;
-  }
-}
-
 @media (min-width: 1200px)
 {
   .container{
@@ -160,4 +145,32 @@ input[type="submit"]
 .button:hover{
   cursor: pointer;
   background: #428a7d;
+}
+@media (max-width: 800px) {
+label>span
+  {
+  float: left;
+    width: 37%;
+    margin-top: 17px;
+    padding-right: 10px;
+  }
+  input[type="submit"]
+  {
+    width: 90%;
+  }
+  select{
+  width: 25%;
+  height: 45px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+  input[type="text"], input[type="time"], input[type="email"]
+{
+  width: 50%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #c19f5f;
+  color: #0;
+}
 }
