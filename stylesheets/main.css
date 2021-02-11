@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
 body{
   background: url('about:blank');
   font-family: 'Roboto Condensed', sans-serif;
