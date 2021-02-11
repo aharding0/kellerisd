@@ -9,7 +9,12 @@
     Student ID Number:<br>
     <input type="text" name="entry.209718426" id="entry.209718426" maxlength="7" size="7" required><br><br>
     <label for="pickup">Select a time to pickup your order:</label>
-    <input type="time" id="pickuptime" name="pickuptime" placeholder="Enter time" min="8:00" max="12:59"  required><br>
+<select name="pickup" id="pickup">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
     <input type="submit" value="Submit">
   </form>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
