@@ -40,7 +40,7 @@ form{
 }
 select option {
     margin: 40px;
-    background: #fff;
+    background: #c19f5f;
     color: #0;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
@@ -91,6 +91,7 @@ input[type="text"], input[type="time"], input[type="email"], select
 select{
   width: 7%;
   height: 45px;
+  background: #c19f5f;
   padding: 5px 10px;
   margin-bottom: 10px;
 }
