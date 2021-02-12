@@ -29,6 +29,13 @@ body{
     max-width: 1140px;
   }
 }
+
+select option {
+    margin: 40px;
+    background: #fff;
+    color: #0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
 .d-flex{
   display: flex;
   flex-direction: row;
