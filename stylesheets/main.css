@@ -5,6 +5,10 @@
   zoom: 1.0 ;
 }
 
+h1{
+  margin-left:300px;
+}
+
 body{
   background: url('about:blank');
   font-family: 'Roboto Condensed', sans-serif;
