@@ -18,25 +18,20 @@
     <label>
     <span class="seltime">Beverage: <span class="required">*</span></span>
   <select name="entry.559691299" id="entry.559691299" required>
-  <option disabled selected value> ----- </option> 
-  <option value="Sprite">Tea</option>
-  <option value="Coke">Lemonade</option>
-  <option value="Coke"></option>
-  </select>
-    </label>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<select id="type">
-    <option value="item0">--Beverage--</option>
-    <option value="item1">Hot</option>
-    <option value="item2">Iced</option>
-</select>
-
-<select id="size">
-    <option value="">-- select one -- </option>
-</select>
-<script>
+        <option value="item0">--Beverage--</option>
+        <option value="item1">Hot</option>
+        <option value="item2">Iced</option>
+    </select>
+    
+    <select id="size">
+        <option value="">-- select one -- </option>
+    </select>
+    <script>
+    </label>
+    
     $(document).ready(function () {
-    $("#type").change(function () {
+    $("#entry.559691299").change(function () {
         var val = $(this).val();
         if (val == "item1") {
             $("#size").html("<option value='test'>item1: test 1</option><option value='test2'>item1: test 2</option>");
