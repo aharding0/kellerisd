@@ -1,4 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
 $(document).ready(function() {
 
     $("#type").change(function() {
