@@ -2,11 +2,12 @@
 <html>
 <head>
   <script>
- $('input[type=checkbox]').on('change', function (e) {
-    if ($('input[type=checkbox]:checked').length > 2) {
-        $(this).prop('checked', false);
-        alert("Limit 2 Flavors");
-    }
+ $('.checkbox').click(function(){
+  if ($('.checkbox:checked').length >= 3) {
+    $(".checkbox").not(":checked").attr("disabled",true);
+  }
+  else 
+    $(".checkbox").not(":checked").removeAttr('disabled');
 });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
