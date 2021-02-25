@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="/frhcoffeeshop/checkbox.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1sKevruRaGBvulX-OSreMpVifqhrE5jfFqtl4eAsvolA/formResponse?" onsubmit="submitted=true;">
     <label>
@@ -18,7 +16,7 @@
     <input type="text" name="entry.209718426" id="entry.209718426" maxlength="7" size="7" required>
     </label>
     <label>
-    <span class="seltime">Iced Beverage: <span class="required">*</span></span>
+    <span class="seltime">Beverage: <span class="required">*</span></span>
   <select name="entry.559691299" id="entry.559691299" required>
   <option disabled selected value> ----- </option> 
   <option value="Sprite">Tea</option>
@@ -26,6 +24,32 @@
   <option value="Coke"></option>
   </select>
     </label>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<select id="type">
+    <option value="item0">--Beverage--</option>
+    <option value="item1">Hot</option>
+    <option value="item2">Iced</option>
+</select>
+
+<select id="size">
+    <option value="">-- select one -- </option>
+</select>
+<script>
+    $(document).ready(function () {
+    $("#type").change(function () {
+        var val = $(this).val();
+        if (val == "item1") {
+            $("#size").html("<option value='test'>item1: test 1</option><option value='test2'>item1: test 2</option>");
+        } else if (val == "item2") {
+            $("#size").html("<option value='test'>item2: test 1</option><option value='test2'>item2: test 2</option>");
+        } else if (val == "item3") {
+            $("#size").html("<option value='test'>item3: test 1</option><option value='test2'>item3: test 2</option>");
+        } else if (val == "item0") {
+            $("#size").html("<option value=''>--select one--</option>");
+        }
+    });
+});
+</script>
     <label>
     <span class="flavors">Flavors: </span>
     </label>
@@ -103,15 +127,5 @@
     $('#gform').prepend('Your submission has been processed...');
     });
   </script>
-
-<select id="type">
-  <option value="0">item1</option>
-  <option value="1">item2</option>
-  <option value="2">item3</option>
-</select>
-
-<select id="size">
-  <option value="">-- select one -- </option>
-</select>
 </body>
 </html>
