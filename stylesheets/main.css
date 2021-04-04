@@ -149,6 +149,9 @@ table{
 th{
   border-bottom: 1px solid #dadada;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 tr>td:nth-child(1){
   text-align: center;
@@ -214,10 +217,10 @@ input[type="checkbox"]
 @media (max-width: 800px) {
 label>span
   {
-  float: left;
-    width: 100%;
-    margin-top: 17px;
-    padding-right: 10px;
+    
+  }
+  input[type="button"]{
+    margin-left:5px;
   }
   h1{
     margin-left: 35%;
@@ -227,8 +230,8 @@ label>span
     width: 90%;
   }
   select{
-  width: 30%;
-  height: 45px;
+  width: 65px;
+  height: 25px;
   padding: 5px 10px;
   margin-bottom: 10px;
 }
