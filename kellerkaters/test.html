@@ -982,7 +982,7 @@
         </tr>
       </table>
     </div>
-    <button id="showOrder" onclick="showOrder()">Show Order</button>
+    <button id="showOrder" onclick="showOrder()">Narrow Search To My Order</button>
     <button id="showAll" onclick="showAll()">Show All Items</button>
     <label><span>Order Total: </span><span id="total"></span></label>
     <br>
@@ -994,6 +994,7 @@
       var qty = [];
       var item = [];
       var price = [];
+      var numItems = 0;
       var input, filter, table, tr, td, cell, i, j;
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
@@ -1032,6 +1033,7 @@
 
       function calc() {
         total = 0;
+        var count=1;
         
         document.getElementById("entry.1873909031").value = "";
         for (i = 1; i < tr.length; i++) {
@@ -1041,10 +1043,12 @@
           if(qty[i]>0){
           	total += price[i] * qty[i];
             item[i] = document.getElementById("item" + i).innerHTML;
-            document.getElementById("entry.1873909031").value += item[i] + " - Quantity: " + qty[i] + ", ";
+            document.getElementById("entry.1873909031").value += count + ". " + item[i] + " - Quantity: " + qty[i] + "\n \n";
+            count++;
           }
           
         }
+        numItems = item.length;
         document.getElementById("total").textContent = "$" + total.toFixed(2);
         }
 
@@ -1107,7 +1111,7 @@
 
     <label>
       <span class="displayorder">Order: </span>
-      <input style="width:500px;" type="text" name="entry.1873909031" id="entry.1873909031" disabled required>
+      <textarea textarea rows="10" cols="40" wrap="hard" style="" type="text" name="entry.1873909031" id="entry.1873909031" disabled required></textarea>
     </label>
     
 <br>
