@@ -1,152 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./img/logos.png"
-    />
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600&display=swap" rel="stylesheet">
-    <title>Please Edit Me</title>
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-        text-decoration: none;
-        font-size: 11px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Start Banner -->
-    <header>
-      <div class="banner">
-        <img src="img/logo.svg" alt="" class="logo" />
-        <h1 id="header" class="banner-header"></h1>
-        <p id="header2" class="banner-paragraph">
-          
-        </p>
-        <div class="button-box">
-          <a href="#"><button class="ios-button">Copy-edit</button></a>
-          <a href="#"><button class="mac-button">Revise</button></a>
-        </div>
-      </div>
-    </header>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <!-- Start Section One: Keep track of your snippets -->
-    <section class="feature">
-      <div class="intro-text">
-        <h3 id="body"></h3>
-        <p id="body2">
-          
-        </p>
-      </div>
-      <div class="track-snippets">
-        <div class="snippet-left"><img src="img/image-computer.png" alt="computer" /></div>
-        <div class="snippet-right">
-          <div>
-            <h4 id="body3"></h4>
-            <p id="body4">
-            </p>
-          </div>
-          <div>
-            <h4 id="body5"></h4>
-            <p id="body6"></p>
-          </div>
-          <div>
-            <h4 id="body7"></h4>
-            <p id="body8">
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 
-    <!-- Start Section Two: Access Clipboard anywhere -->
-    <section class="feature access-clipboard">
-      <div class="intro-text">
-        <h3 id="body9"></h3>
-        <p id="body10">
-         
-        </p>
-      </div>
-      <div>
-        <img src="img/image-devices.png" alt="devices" />
-      </div>
-    </section>
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
 
-    <!-- Start Section Three: Supercharge your workflow -->
-    <section class="feature supercharge-workflow">
-      <div class="intro-text">
-        <h3 id="body11"></h3>
-        <p id="body12"></p>
-      </div>
-      <div class="columns">
-        <div class="col create-blacklists">
-          <img src="img/icon-blacklist.svg" alt="" />
-          <h4 id="body13"></h4>
-          <p id="body14"> 
-          </p>
-        </div>
-        <div class="col plain-snippets">
-          <img src="img/icon-text.svg" alt="" />
-          <h4 id="body15"> </h4>
-          <p id="body16">
-            
-          </p>
-        </div>
-        <div class="col sneak-preview">
-          <img src="img/icon-preview.svg" alt="" />
-            <h4 id="body17"</h4>
-         
-        </div>
-      </div>
-    </section>
-    <script src="main.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-  </body>
-</html>
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<input type="search" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="Type in a name">
+<div style="overflow:scroll; height:250px;">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Item</th>
+    <th style="width:40%;">Price</th>
+    <th>Quantity</th>
+    <th>Keywords</th>
+  </tr>
+  <tr>
+    <td id="name1">Strawberry Parfait</td>
+    <td id="price1">$3.50</td>
+    <td><select id="qty1"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn1" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty1').value='0';calc();" /></td>
+    <td style="font-size: 8pt;">cold strawberry greek yogurt whole grain oats peanut-free</td>
+  </tr>
+  <tr>
+    <td id="name2">Cookies</td>
+    <td id="price2">$2.25</td>
+    <td><select id="qty2"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn2" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty2').value='0';calc();" /></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td id="name3">Water</td>
+    <td id="price3">$1.70</td>
+    <td><select id="qty3"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn3" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty3').value='0';calc();" /></td>
+    <td style="font-size: 8pt;">cold low calories</td>
+  </tr>
+  <tr>
+    <td id="name4">Brisket</td>
+    <td id="price4">$7.50</td>
+    <td><select id="qty4"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn4" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty4').value='0';calc();" /></td>
+    <td style="font-size: 8pt;">high protein beef</td>
+  </tr>
+  <tr>
+    <td id="name5">Jello</td>
+    <td id="price5">$1.20</td>
+    <td><select id="qty5"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn5" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty5').value='0';calc();" /></td>
+    <td style="font-size: 8pt;">blue</td>
+  </tr>
+  <tr>
+    <td id="name6">Cheesecake</td>
+    <td id="price6">$10.70</td>
+    <td><select id="qty6"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn6" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty6').value='0';calc();" /></td>
+    <td style="font-size: 8pt;">fun</td>
+  </tr>
+  <tr>
+    <td id="name7">Fruit Smoothie</td>
+    <td id="price7">$3.50</td>
+    <td><select id="qty7"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn7" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty7').value='0';calc();" /></td>
+    <td style="font-size: 8pt;"></td>
+  </tr>
+  <tr>
+    <td id="name8">Pie</td>
+    <td id="price8">$2.25</td>
+    <td><select id="qty8"><option>0</option><option>1</option><option>2</option><option>3</option></select><input id="btn8" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty8').value='0';calc();" /></td>
+    <td style="font-size: 8pt;"></td>
+  </tr>
+</table>
+</div>
 <script>
-  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1DpRZ4IA6Xd_rd4sNnkpuTkp_-6KOEJJWS-VqZxw4oU0/edit?usp=sharing';
+
+var total = 0;
+var qty = [];
+var item = [];
+var price = [];
+var input, filter, table, tr, td, cell, i, j;
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+for (i = 1; i < tr.length; i++) {
+      //item[i] = document.getElementById("item"+i).innerHTML;
+      price[i] = parseFloat(document.getElementById("price"+i).innerHTML.replace(/[$]/g, ""));
+      qty[i] = document.getElementById("qty"+i).value;
+      
+      document.getElementById("qty"+i).addEventListener("change", calc);
+}
+
+
+  function myFunction() {
+  var input, filter, table, tr, td, cell, i, j;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 1; i < tr.length; i++) {
+   
+    tr[i].style.display = "none";
   
-  function init() {
-    Tabletop.init( { key: publicSpreadsheetUrl,
-                     callback: showInfo,
-                     simpleSheet: true } )
+    td = tr[i].getElementsByTagName("td");
+    for (var j = 0; j < td.length; j++) {
+      cell = tr[i].getElementsByTagName("td")[j];
+      if (cell) {
+        if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          break;
+        } 
+      }
+    }
   }
 
- 
-function showInfo(data, tabletop) {
-data.forEach(function(data) {
-    header.innerHTML = data.header;
-    header2.innerHTML = data.header2;
-    body.innerHTML = data.body;
-    body2.innerHTML = data.body2;
-    body3.innerHTML = data.body3;
-    body4.innerHTML = data.body4;
-    body5.innerHTML = data.body5;
-    body6.innerHTML = data.body6;
-    body7.innerHTML = data.body7;
-    body8.innerHTML = data.body8;
-    body9.innerHTML = data.body9;
-    body10.innerHTML = data.body10;
-    body11.innerHTML = data.body11;
-    body12.innerHTML = data.body12;
-    body13.innerHTML = data.body13;
-    body14.innerHTML = data.body14;
-    body15.innerHTML = data.body15;
-    body16.innerHTML = data.body16;
-    body17.innerHTML = data.body17;
-
- });
 }
-  window.addEventListener('DOMContentLoaded', init)
+
+function calc(){
+total = 0;
+	for (i = 1; i < tr.length; i++) {
+  price[i] = parseFloat(document.getElementById("price"+i).innerHTML.replace(/[$]/g, ""));
+      qty[i] = document.getElementById("qty"+i).value;
+		total += price[i]*qty[i];
+	}
+document.getElementById("total").textContent= "$" + total.toFixed(2);
+}
+
+function showOrder() {
+    // Select the 'myInput' search box, and set it's value to an empty String
+    document.getElementById("myInput").value = "";
+    myFunction();
+    // Call seach, which should reset the result list
+    total = 0;
+    var qty = [];
+    var item = [];
+    var price = [];
+    var input, filter, table, tr, td, cell, i, j;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 1; i < tr.length; i++) {
+   
+    tr[i].style.display = "none";
+  	qty[i] = document.getElementById("qty"+i).value;
+    //item[i] = document.getElementById("item"+i).textContent;
+    price[i] = parseFloat(document.getElementById("price"+i).innerHTML.replace(/[$]/g, ""));
+    td = tr[i].getElementsByTagName("td");
+    for (var j = 0; j < td.length; j++) {
+      cell = tr[i].getElementsByTagName("td")[2];
+      if (cell) {
+        if (qty[i]>0) {
+          tr[i].style.display = "";
+          total += price[i]*qty[i];
+          document.getElementById("total").textContent= "$" + total.toFixed(2);
+          break;
+        }
+        else{tr[i].style.display = "none";}
+      }
+    }
+  }
+  
+    
+  }
+  
+  function showAll(){
+    document.getElementById("myInput").value = "";
+    myFunction();
+  }
 </script>
+<br>
+Order Total: <span id="total"></span>
+<br>
+<br>
+<button id="showOrder" onclick="showOrder()">Show Order</button>
+<button id="showAll" onclick="showAll()">Show All Items</button>
+
+</body>
+</html>
