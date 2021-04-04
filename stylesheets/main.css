@@ -5,8 +5,44 @@
   zoom: 1.0 ;
 }
 
+{
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
 body{
   background: url('about:blank');
+  background-color: #ffffff;
   font-family: 'Roboto Condensed', sans-serif;
   color: #262626;
   margin: 5% 0;
@@ -85,7 +121,7 @@ label>span{
 }
 input[type="text"], input[type="time"], input[type="email"], select
 {
-  width: 30%;
+  width: 50%;
   height: 30px;
   padding: 5px 10px;
   margin-bottom: 10px;
@@ -109,18 +145,18 @@ table{
   margin: 0;
   padding: 0;
 }
+
 th{
   border-bottom: 1px solid #dadada;
   padding: 10px 0;
 }
 tr>td:nth-child(1){
   text-align: center;
-  color: #FF0000;
+  color: #0;
 }
 tr>td:nth-child(2){
   text-align: center;
-  color: #d4af37
-;
+  color: #ff0000;
 }
 td{
   border-bottom: 1px solid #fffff;
@@ -179,7 +215,7 @@ input[type="checkbox"]
 label>span
   {
   float: left;
-    width: 37%;
+    width: 100%;
     margin-top: 17px;
     padding-right: 10px;
   }
@@ -209,10 +245,18 @@ label>span
 @media (min-width: 801px) {
 input[type="submit"]
   {
-    width: 50%;
+    width: 70%;
   }
   select{
-  width: 15%;
+  width: 75%;
+}
+#entry.619950903{
+  width: 5%;
+}
+
+select option {
+  width:10%;
+  }
 }
   h1{
     margin-left: 22%;
