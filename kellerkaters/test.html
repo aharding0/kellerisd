@@ -3,12 +3,11 @@
 
   <head>
     <script type="text/javascript">
-      var submitted = false;
 
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse?" onsubmit="submitted=true;">
-
+   
       <label>
         <span class="reqname">Name of Requestee: <span class="required">*</span></span>
         <input type="text" name="entry.1350583608" id="entry.1350583608" maxlength="30" size="30" required>
@@ -101,20 +100,20 @@
         <input type="text" name="entry.2064814677" id="entry.2064814677" maxlength="4" size="4" required>
       </label>
 
-    </form>
+    
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     <link rel="stylesheet" href="../stylesheets/main.css">
-  </head>
+  
 
-  <body>
+  
     <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
     <div style="overflow:scroll;width:95%;height:250px;">
       <table id="myTable">
         <tr class="header">
-          <th style="width:35%;">Item</th>
-          <th style="width:5%;">Price</th>
-          <th style="width:55%;">Quantity</th>
-          <th style="width:10%;">Keywords</th>
+          <th id="item" style="">Item</th>
+          <th id="price" style="">Price</th>
+          <th id="quantity" style="">Quantity</th>
+          <th id="keywords" style="width:30%;">Keywords</th>
         </tr>
         <tr>
           <td id="item1">Bacon Wrapped Pork Loin with Bourbon Glaze</td>
@@ -988,8 +987,30 @@
     <br>
     <br>
 
+    <label>
+      <span class="displayorder">Order: </span>
+      <textarea textarea rows="10" cols="40" wrap="hard" style="" type="text" name="entry.1873909031" id="entry.1873909031" disabled required></textarea>
+    </label>
+    
+<br>
+    <input type="submit" value="Submit Order" onsubmit="submitted=true;">
+  
+  </form>
+   </head>
+   <body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Your submission has been processed...');
+      });
 
-    <script>
+    </script> 
+    
+  </body>
+  
+  <script>
       var total = 0;
       var qty = [];
       var item = [];
@@ -1097,25 +1118,5 @@
       }
 
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    <script type="text/javascript">
-      $('#gform').on('submit', function(e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your submission has been processed...');
-      });
-
-    </script>
-
-
-    <label>
-      <span class="displayorder">Order: </span>
-      <textarea textarea rows="10" cols="40" wrap="hard" style="" type="text" name="entry.1873909031" id="entry.1873909031" disabled required></textarea>
-    </label>
-    
-<br>
-    <input type="submit" value="Submit Order" onsubmit="submitted=true;">
-  </body>
 
 </html>
