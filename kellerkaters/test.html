@@ -108,7 +108,7 @@
 
   <body>
     <input type="search" style="width:70%;" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="Type in a name">
-    <div style="overflow:scroll;width:70%;height:250px;">
+    <div style="overflow:scroll;width:95%;height:250px;">
       <table id="myTable">
         <tr class="header">
           <th style="width:15%;">Item</th>
@@ -117,9 +117,9 @@
           <th style="width:10%;">Keywords</th>
         </tr>
         <tr>
-          <td id="name1">Bacon Wrapped Pork Loin with Bourbon Glaze</td>
+          <td id="item1">Bacon Wrapped Pork Loin with Bourbon Glaze</td>
           <td id="price1">$11.95</td>
-          <td style=""><select id="qty1" style="width:70px;">
+          <td style=""><select id="qty1" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -221,13 +221,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn1" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty1').value='0';calc();" /></td>
+            </select><input id="btn1" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty1').value='0';calc();" /></td>
           <td style="font-size: 8pt;">cold strawberry greek yogurt whole grain oats peanut-free</td>
         </tr>
         <tr>
-          <td id="name2">Cookies</td>
+          <td id="item2">Cookies</td>
           <td id="price2">$2.25</td>
-          <td><select id="qty2" style="width:70px;">
+          <td><select id="qty2" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -329,13 +329,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn2" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty2').value='0';calc();" /></td>
+            </select><input id="btn2" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty2').value='0';calc();" /></td>
           <td></td>
         </tr>
         <tr>
-          <td id="name3">Water</td>
+          <td id="item3">Water</td>
           <td id="price3">$1.70</td>
-          <td><select id="qty3" style="width:70px;">
+          <td><select id="qty3" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -437,13 +437,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn3" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty3').value='0';calc();" /></td>
+            </select><input id="btn3" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty3').value='0';calc();" /></td>
           <td style="font-size: 8pt;">cold low calories</td>
         </tr>
         <tr>
-          <td id="name4">Brisket</td>
+          <td id="item4">Brisket</td>
           <td id="price4">$7.50</td>
-          <td><select id="qty4" style="width:70px;">
+          <td><select id="qty4" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -545,13 +545,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn4" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty4').value='0';calc();" /></td>
+            </select><input id="btn4" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty4').value='0';calc();" /></td>
           <td style="font-size: 8pt;">high protein beef</td>
         </tr>
         <tr>
-          <td id="name5">Jello</td>
+          <td id="item5">Jello</td>
           <td id="price5">$1.20</td>
-          <td><select id="qty5" style="width:70px;">
+          <td><select id="qty5" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -653,13 +653,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn5" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty5').value='0';calc();" /></td>
+            </select><input id="btn5" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty5').value='0';calc();" /></td>
           <td style="font-size: 8pt;">blue</td>
         </tr>
         <tr>
-          <td id="name6">Cheesecake</td>
+          <td id="item6">Cheesecake</td>
           <td id="price6">$10.70</td>
-          <td><select id="qty6" style="width:70px;">
+          <td><select id="qty6" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -761,13 +761,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn6" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty6').value='0';calc();" /></td>
+            </select><input id="btn6" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty6').value='0';calc();" /></td>
           <td style="font-size: 8pt;">fun</td>
         </tr>
         <tr>
-          <td id="name7">Fruit Smoothie</td>
+          <td id="item7">Fruit Smoothie</td>
           <td id="price7">$3.50</td>
-          <td><select id="qty7" style="width:70px;">
+          <td><select id="qty7" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -869,13 +869,13 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn7" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty7').value='0';calc();" /></td>
+            </select><input id="btn7" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty7').value='0';calc();" /></td>
           <td style="font-size: 8pt;"></td>
         </tr>
         <tr>
-          <td id="name8">Pie</td>
+          <td id="item8">Pie</td>
           <td id="price8">$2.25</td>
-          <td><select id="qty8" style="width:70px;">
+          <td><select id="qty8" style="">
               <option value="0">------</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -977,7 +977,7 @@
               <option value="98">98</option>
               <option value="99">99</option>
               <option value="100">100</option>
-            </select><input id="btn8" style="background-color:red;color:white;margin-left:10px;" type="button" value="x" onclick="document.getElementById('qty8').value='0';calc();" /></td>
+            </select><input id="btn8" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty8').value='0';calc();" /></td>
           <td style="font-size: 8pt;"></td>
         </tr>
       </table>
@@ -998,7 +998,7 @@
       table = document.getElementById("myTable");
       tr = table.getElementsByTagName("tr");
       for (i = 1; i < tr.length; i++) {
-        //item[i] = document.getElementById("item"+i).innerHTML;
+        item[i] = document.getElementById("item"+i).innerHTML;
         price[i] = parseFloat(document.getElementById("price" + i).innerHTML.replace(/[$]/g, ""));
         qty[i] = document.getElementById("qty" + i).value;
 
@@ -1032,13 +1032,21 @@
 
       function calc() {
         total = 0;
+        
+        document.getElementById("entry.1873909031").value = "";
         for (i = 1; i < tr.length; i++) {
+        	
           price[i] = parseFloat(document.getElementById("price" + i).innerHTML.replace(/[$]/g, ""));
           qty[i] = document.getElementById("qty" + i).value;
-          total += price[i] * qty[i];
+          if(qty[i]>0){
+          	total += price[i] * qty[i];
+            item[i] = document.getElementById("item" + i).innerHTML;
+            document.getElementById("entry.1873909031").value += item[i] + "- Quantity: " + qty[i] + ", ";
+          }
+          
         }
         document.getElementById("total").textContent = "$" + total.toFixed(2);
-      }
+        }
 
       function showOrder() {
         // Select the 'myInput' search box, and set it's value to an empty String
@@ -1099,7 +1107,7 @@
 
     <label>
       <span class="displayorder">Order: </span>
-      <input type="text" name="entry.1873909031" id="entry.1873909031" disabled required>
+      <input style="width:500px;" type="text" name="entry.1873909031" id="entry.1873909031" disabled required>
     </label>
     
 <br>
