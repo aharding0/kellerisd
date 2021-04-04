@@ -18,17 +18,17 @@
         <input type="text" name="entry.385453401" id="entry.385453401" maxlength="20" size="20" required>
       </label>
       <label>
-        <span class="eventloc">Event Location (Specify Room): <span class="required">*</span></span>
+        <span class="eventloc">Room (be specific): <span class="required">*</span></span>
         <input type="text" name="entry.502029463" id="entry.502029463" maxlength="20" size="20" required>
       </label>
       <label>
-        <span class="phonenum">Contact Phone Number: <span class="required">*</span></span>
+        <span class="phonenum">Phone #: <span class="required">*</span></span>
         <input type="text" name="entry.351618291" id="entry.351618291" maxlength="15" size="15" required>
       </label>
       <label>
         <span class="reqdate">Requested Date: <span class="required">*</span></span>
         <input type="date" style="width:150px" name="entry.454229218" id="entry.454229218" min="2021-04-01" max="2023-01-01" required>
-      </label>
+      </label><br>
       <label>
         <span class="seltime">Requested Time: <span class="required">*</span></span>
         <select name="entry.619950903" id="entry.619950903" style="width:100px;" required>
@@ -107,13 +107,13 @@
   </head>
 
   <body>
-    <input type="search" style="width:70%;" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="Type in a name">
+    <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
     <div style="overflow:scroll;width:95%;height:250px;">
       <table id="myTable">
         <tr class="header">
-          <th style="width:15%;">Item</th>
+          <th style="width:35%;">Item</th>
           <th style="width:5%;">Price</th>
-          <th style="width:15%;">Quantity</th>
+          <th style="width:55%;">Quantity</th>
           <th style="width:10%;">Keywords</th>
         </tr>
         <tr>
@@ -1041,7 +1041,7 @@
           if(qty[i]>0){
           	total += price[i] * qty[i];
             item[i] = document.getElementById("item" + i).innerHTML;
-            document.getElementById("entry.1873909031").value += item[i] + "- Quantity: " + qty[i] + ", ";
+            document.getElementById("entry.1873909031").value += item[i] + " - Quantity: " + qty[i] + ", ";
           }
           
         }
