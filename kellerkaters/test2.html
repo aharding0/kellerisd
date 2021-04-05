@@ -6,7 +6,9 @@
 
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse" onsubmit="">
+    
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse" onsubmit="submitted=true;">
+    
    
       <label>
         <span class="reqname">Name of Requestee: <span class="required">*</span></span>
@@ -101,7 +103,10 @@
       </label>
 
     
-        <link rel="stylesheet" href="../stylesheets/main.css">
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    <link rel="stylesheet" href="../stylesheets/main.css">
+  
+
   
     <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
     <div style="overflow:scroll;width:95%;height:250px;">
@@ -995,6 +1000,15 @@
   </form>
    </head>
    <body>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Your submission has been processed...');
+      });
+
+    </script> 
     
   </body>
   
@@ -1014,6 +1028,12 @@
 
         document.getElementById("qty" + i).addEventListener("change", calc);
       }
+
+      function setAction(form) {
+        form.action = "https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse?" + "";
+        alert(form.action);
+        return false;
+}
 
 
       function myFunction() {
