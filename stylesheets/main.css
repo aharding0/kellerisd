@@ -221,9 +221,16 @@ input[type="checkbox"]
   background: #428a7d;
 }
 @media (max-width: 800px) {
-label>span
+  label>span
   {
     
+  }
+  #myTable th, #myTable td {
+  text-align: left;
+  padding: 5px;
+}
+  #item{
+    width:100px;
   }
   body{
     font-size: 12px;
@@ -266,11 +273,15 @@ input[type="submit"]
   {
     width: 70%;
   }
-  select{
-  width: 75%;
-}
-#entry.619950903{
-  width: 5%;
+  input[type="button"]{
+    margin-left:15px;
+  }
+  
+select{
+  width: 65px;
+  height: 25px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
 }
 
 select option {
@@ -281,3 +292,4 @@ select option {
     margin-left: 22%;
   }
 }
+
