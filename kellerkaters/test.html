@@ -1,1110 +1,281 @@
-<!DOCTYPE html>
-<html>
+<div class="container my-5">
 
-  <head>
-    <script type="text/javascript">
+  <div class="row">
 
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse" onsubmit="">
-   
-      <label>
-        <span class="reqname">Name of Requestee: <span class="required">*</span></span>
-        <input type="text" name="entry.1350583608" id="entry.1350583608" maxlength="30" size="30" required>
-      </label>
-      <label>
-        <span class="facname">Facility Name: <span class="required">*</span></span>
-        <input type="text" name="entry.385453401" id="entry.385453401" maxlength="20" size="20" required>
-      </label>
-      <label>
-        <span class="eventloc">Room (be specific): <span class="required">*</span></span>
-        <input type="text" name="entry.502029463" id="entry.502029463" maxlength="20" size="20" required>
-      </label>
-      <label>
-        <span class="phonenum">Phone #: <span class="required">*</span></span>
-        <input type="text" name="entry.351618291" id="entry.351618291" maxlength="15" size="15" required>
-      </label>
-      <label>
-        <span class="reqdate">Requested Date: <span class="required">*</span></span>
-        <input type="date" style="width:150px" name="entry.454229218" id="entry.454229218" min="2021-04-01" max="2023-01-01" required>
-      </label><br>
-      <label>
-        <span class="seltime">Requested Time: <span class="required">*</span></span>
-        <select name="entry.619950903" id="entry.619950903" style="width:100px;" required>
-          <option disabled selected value> ----- </option>
-          <option value="7:00">7:00 AM</option>
-          <option value="7:15">7:15 AM</option>
-          <option value="7:30">7:30 AM</option>
-          <option value="7:45">7:45 AM</option>
-          <option value="8:00">8:00 AM</option>
-          <option value="8:15">8:15 AM</option>
-          <option value="8:30">8:30 AM</option>
-          <option value="8:45">8:45 AM</option>
-          <option value="9:00">9:00 AM</option>
-          <option value="9:15">9:15 AM</option>
-          <option value="9:30">9:30 AM</option>
-          <option value="9:45">9:45 AM</option>
-          <option value="10:00">10:00 AM</option>
-          <option value="10:15">10:15 AM</option>
-          <option value="10:30">10:30 AM</option>
-          <option value="10:45">10:45 AM</option>
-          <option value="11:00">11:00 AM</option>
-          <option value="11:15">11:15 AM</option>
-          <option value="11:30">11:30 AM</option>
-          <option value="11:45">11:45 AM</option>
-          <option value="12:00">12:00 PM</option>
-          <option value="12:15">12:15 PM</option>
-          <option value="12:30">12:30 PM</option>
-          <option value="12:45">12:45 PM</option>
-          <option value="13:00">1:00 PM</option>
-          <option value="13:15">1:15 PM</option>
-          <option value="13:30">1:30 PM</option>
-          <option value="13:45">1:45 PM</option>
-          <option value="14:00">2:00 PM</option>
-          <option value="14:15">2:15 PM</option>
-          <option value="14:30">2:30 PM</option>
-          <option value="14:45">2:45 PM</option>
-          <option value="15:00">3:00 PM</option>
-          <option value="15:15">3:15 PM</option>
-          <option value="15:30">3:30 PM</option>
-          <option value="15:45">3:45 PM</option>
-          <option value="16:00">4:00 PM</option>
-          <option value="16:15">4:15 PM</option>
-          <option value="16:30">4:30 PM</option>
-          <option value="16:45">4:45 PM</option>
-          <option value="17:00">5:00 PM</option>
-          <option value="17:15">5:15 PM</option>
-          <option value="17:30">5:30 PM</option>
-          <option value="17:45">5:45 PM</option>
-          <option value="18:00">6:00 PM</option>
-          <option value="18:15">6:15 PM</option>
-          <option value="18:30">6:30 PM</option>
-          <option value="18:45">6:45 PM</option>
-          <option value="19:00">7:00 PM</option>
-          <option value="19:15">7:15 PM</option>
-          <option value="19:30">7:30 PM</option>
-          <option value="19:45">7:45 PM</option>
-          <option value="20:00">8:00 PM</option>
-          <option value="20:15">8:15 PM</option>
-          <option value="20:30">8:30 PM</option>
-          <option value="20:45">8:45 PM</option>
-          <option value="21:00">9:00 PM</option>
-          <option value="21:15">9:15 PM</option>
-          <option value="21:30">9:30 PM</option>
-          <option value="21:45">9:45 PM</option>
-          <option value="22:00">10:00 PM</option>
-        </select>
-      </label>
-      <label>
-        <span class="numpeople">Number of Attendees: <span class="required">*</span></span>
-        <input type="text" name="entry.2064814677" id="entry.2064814677" maxlength="4" size="4" required>
-      </label>
+    <div class="col-md-7 mb-4 mb-md-0">
 
-    
-        <link rel="stylesheet" href="../stylesheets/main.css">
-  
-    <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
-    <div style="overflow:scroll;width:95%;height:250px;">
-      <table id="myTable">
-        <tr class="header">
-          <th id="item" style="">Item</th>
-          <th id="price" style="">Price</th>
-          <th id="quantity" style="width:40%;">Quantity</th>
-          <th id="keywords" style="width:20%;">Keywords</th>
-        </tr>
-        <tr>
-          <td id="item1">Bacon Wrapped Pork Loin with Bourbon Glaze</td>
-          <td id="price1">$11.95</td>
-          <td style=""><select id="qty1" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn1" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty1').value='0';calc();" /></td>
-          <td style="font-size: 8pt;">cold strawberry greek yogurt whole grain oats peanut-free</td>
-        </tr>
-        <tr>
-          <td id="item2">Cookies</td>
-          <td id="price2">$2.25</td>
-          <td><select id="qty2" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn2" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty2').value='0';calc();" /></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td id="item3">Water</td>
-          <td id="price3">$1.70</td>
-          <td><select id="qty3" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn3" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty3').value='0';calc();" /></td>
-          <td style="font-size: 8pt;">cold low calories</td>
-        </tr>
-        <tr>
-          <td id="item4">Brisket</td>
-          <td id="price4">$7.50</td>
-          <td><select id="qty4" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn4" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty4').value='0';calc();" /></td>
-          <td style="font-size: 8pt;">high protein beef</td>
-        </tr>
-        <tr>
-          <td id="item5">Jello</td>
-          <td id="price5">$1.20</td>
-          <td><select id="qty5" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn5" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty5').value='0';calc();" /></td>
-          <td style="font-size: 8pt;">blue</td>
-        </tr>
-        <tr>
-          <td id="item6">Cheesecake</td>
-          <td id="price6">$10.70</td>
-          <td><select id="qty6" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn6" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty6').value='0';calc();" /></td>
-          <td style="font-size: 8pt;">fun</td>
-        </tr>
-        <tr>
-          <td id="item7">Fruit Smoothie</td>
-          <td id="price7">$3.50</td>
-          <td><select id="qty7" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn7" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty7').value='0';calc();" /></td>
-          <td style="font-size: 8pt;"></td>
-        </tr>
-        <tr>
-          <td id="item8">Pie</td>
-          <td id="price8">$2.25</td>
-          <td><select id="qty8" style="">
-              <option value="0">------</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-              <option value="46">46</option>
-              <option value="47">47</option>
-              <option value="48">48</option>
-              <option value="49">49</option>
-              <option value="50">50</option>
-              <option value="51">51</option>
-              <option value="52">52</option>
-              <option value="53">53</option>
-              <option value="54">54</option>
-              <option value="55">55</option>
-              <option value="56">56</option>
-              <option value="57">57</option>
-              <option value="58">58</option>
-              <option value="59">59</option>
-              <option value="60">60</option>
-              <option value="61">61</option>
-              <option value="62">62</option>
-              <option value="63">63</option>
-              <option value="64">64</option>
-              <option value="65">65</option>
-              <option value="66">66</option>
-              <option value="67">67</option>
-              <option value="68">68</option>
-              <option value="69">69</option>
-              <option value="70">70</option>
-              <option value="71">71</option>
-              <option value="72">72</option>
-              <option value="73">73</option>
-              <option value="74">74</option>
-              <option value="75">75</option>
-              <option value="76">76</option>
-              <option value="77">77</option>
-              <option value="78">78</option>
-              <option value="79">79</option>
-              <option value="80">80</option>
-              <option value="81">81</option>
-              <option value="82">82</option>
-              <option value="83">83</option>
-              <option value="84">84</option>
-              <option value="85">85</option>
-              <option value="86">86</option>
-              <option value="87">87</option>
-              <option value="88">88</option>
-              <option value="89">89</option>
-              <option value="90">90</option>
-              <option value="91">91</option>
-              <option value="92">92</option>
-              <option value="93">93</option>
-              <option value="94">94</option>
-              <option value="95">95</option>
-              <option value="96">96</option>
-              <option value="97">97</option>
-              <option value="98">98</option>
-              <option value="99">99</option>
-              <option value="100">100</option>
-            </select><input id="btn8" style="background-color:red;color:white;" type="button" value="x" onclick="document.getElementById('qty8').value='0';calc();" /></td>
-          <td style="font-size: 8pt;"></td>
-        </tr>
+      
+
+      <!-- Table -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Options</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Keywords</th>
+          </tr>
+        </thead>
+        <tbody id="demo"></tbody>
       </table>
+
     </div>
-    <input type="button" id="showorder" onclick="showOrder();return false;" value="Narrow Search To My Order">
-    <input type="button" id="showall" onclick="showAll();return false;" value="Show All Items">
-    <label><span>Order Total: </span><span id="total"></span></label>
-    <br>
-    <br>
 
-    <label>
-      <span class="displayorder">Order: </span>
-      <textarea textarea rows="10" cols="40" wrap="hard" style="" type="text" onkeypress="return false;" name="entry.1873909031" id="entry.1873909031" required></textarea>
-    </label>
-    
-<br>
-    <input type="submit" value="Submit Order" onsubmit="submitted=true;">
-  
-  </form>
-   </head>
-   <body>
-    
-  </body>
-  
-  <script>
-      var total = 0;
-      var qty = [];
-      var item = [];
-      var price = [];
-      var numItems = 0;
-      var input, filter, table, tr, td, cell, i, j;
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 1; i < tr.length; i++) {
-        item[i] = document.getElementById("item"+i).innerHTML;
-        price[i] = parseFloat(document.getElementById("price" + i).innerHTML.replace(/[$]/g, ""));
-        qty[i] = document.getElementById("qty" + i).value;
+	</div>
+</div>
 
-        document.getElementById("qty" + i).addEventListener("change", calc);
-      }
+<script>
+let xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let data = JSON.parse(this.responseText).feed.entry;
 
-
-      function myFunction() {
-        var input, filter, table, tr, td, cell, i, j;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 1; i < tr.length; i++) {
-
-          tr[i].style.display = "none";
-
-          td = tr[i].getElementsByTagName("td");
-          for (var j = 0; j < td.length; j++) {
-            cell = tr[i].getElementsByTagName("td")[j];
-            if (cell) {
-              if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      function calc() {
-        total = 0;
-        var count=1;
+    let i;
+    let j;
+    for (i = 0; i < data.length; i++) {
+      let item = data[i]["gsx$item"]["$t"];
+      let options = data[i]["gsx$options"]["$t"];
+      let price = data[i]["gsx$price"]["$t"];
+      let keywords = data[i]["gsx$keywords"]["$t"];
+      let qty = [];
+      let optionsList = [];
+      for (j=1;j<options.split(",").length;j++){
+        optionsList[j] = options.split(",");
+        //console.log(optionsList[j][2]);
         
-        document.getElementById("entry.1873909031").value = "";
-        for (i = 1; i < tr.length; i++) {
-        	
-          price[i] = parseFloat(document.getElementById("price" + i).innerHTML.replace(/[$]/g, ""));
-          qty[i] = document.getElementById("qty" + i).value;
-          if(qty[i]>0){
-          	total += price[i] * qty[i];
-            item[i] = document.getElementById("item" + i).innerHTML;
-            document.getElementById("entry.1873909031").value += count + ". " + item[i] + " - Quantity: " + qty[i] + "\n \n";
-            count++;
-          }
-          
-        }
-        numItems = item.length;
-        document.getElementById("total").textContent = "$" + total.toFixed(2);
-        }
-
-      function showOrder() {
-        // Select the 'myInput' search box, and set it's value to an empty String
-        document.getElementById("myInput").value = "";
-        myFunction();
-        // Call seach, which should reset the result list
-        total = 0;
-        var qty = [];
-        var item = [];
-        var price = [];
-        var input, filter, table, tr, td, cell, i, j;
-        input = document.getElementById("myInput");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        for (i = 1; i < tr.length; i++) {
-
-          tr[i].style.display = "none";
-          qty[i] = document.getElementById("qty" + i).value;
-          //item[i] = document.getElementById("item"+i).textContent;
-          price[i] = parseFloat(document.getElementById("price" + i).innerHTML.replace(/[$]/g, ""));
-          td = tr[i].getElementsByTagName("td");
-          for (var j = 0; j < td.length; j++) {
-            cell = tr[i].getElementsByTagName("td")[2];
-            if (cell) {
-              if (qty[i] > 0) {
-                tr[i].style.display = "";
-                total += price[i] * qty[i];
-                document.getElementById("total").textContent = "$" + total.toFixed(2);
-                break;
-              } else {
-                tr[i].style.display = "none";
-              }
-            }
-          }
-        }
-
-
       }
+      console.log(options);
+      qty.push("<select id='qty"+i+"'>" +
+              "<option value='1'>1</option>" +
+              "<option value='1'>1</option>" +
+"<option value='2'>2</option>" +
+"<option value='3'>3</option>" +
+"<option value='4'>4</option>" +
+"<option value='5'>5</option>" +
+"<option value='6'>6</option>" +
+"<option value='7'>7</option>" +
+"<option value='8'>8</option>" +
+"<option value='9'>9</option>" +
+"<option value='10'>10</option>" +
+"<option value='11'>11</option>" +
+"<option value='12'>12</option>" +
+"<option value='13'>13</option>" +
+"<option value='14'>14</option>" +
+"<option value='15'>15</option>" +
+"<option value='16'>16</option>" +
+"<option value='17'>17</option>" +
+"<option value='18'>18</option>" +
+"<option value='19'>19</option>" +
+"<option value='20'>20</option>" +
+"<option value='21'>21</option>" +
+"<option value='22'>22</option>" +
+"<option value='23'>23</option>" +
+"<option value='24'>24</option>" +
+"<option value='25'>25</option>" +
+"<option value='26'>26</option>" +
+"<option value='27'>27</option>" +
+"<option value='28'>28</option>" +
+"<option value='29'>29</option>" +
+"<option value='30'>30</option>" +
+"<option value='31'>31</option>" +
+"<option value='32'>32</option>" +
+"<option value='33'>33</option>" +
+"<option value='34'>34</option>" +
+"<option value='35'>35</option>" +
+"<option value='36'>36</option>" +
+"<option value='37'>37</option>" +
+"<option value='38'>38</option>" +
+"<option value='39'>39</option>" +
+"<option value='40'>40</option>" +
+"<option value='41'>41</option>" +
+"<option value='42'>42</option>" +
+"<option value='43'>43</option>" +
+"<option value='44'>44</option>" +
+"<option value='45'>45</option>" +
+"<option value='46'>46</option>" +
+"<option value='47'>47</option>" +
+"<option value='48'>48</option>" +
+"<option value='49'>49</option>" +
+"<option value='50'>50</option>" +
+"<option value='51'>51</option>" +
+"<option value='52'>52</option>" +
+"<option value='53'>53</option>" +
+"<option value='54'>54</option>" +
+"<option value='55'>55</option>" +
+"<option value='56'>56</option>" +
+"<option value='57'>57</option>" +
+"<option value='58'>58</option>" +
+"<option value='59'>59</option>" +
+"<option value='60'>60</option>" +
+"<option value='61'>61</option>" +
+"<option value='62'>62</option>" +
+"<option value='63'>63</option>" +
+"<option value='64'>64</option>" +
+"<option value='65'>65</option>" +
+"<option value='66'>66</option>" +
+"<option value='67'>67</option>" +
+"<option value='68'>68</option>" +
+"<option value='69'>69</option>" +
+"<option value='70'>70</option>" +
+"<option value='71'>71</option>" +
+"<option value='72'>72</option>" +
+"<option value='73'>73</option>" +
+"<option value='74'>74</option>" +
+"<option value='75'>75</option>" +
+"<option value='76'>76</option>" +
+"<option value='77'>77</option>" +
+"<option value='78'>78</option>" +
+"<option value='79'>79</option>" +
+"<option value='80'>80</option>" +
+"<option value='81'>81</option>" +
+"<option value='82'>82</option>" +
+"<option value='83'>83</option>" +
+"<option value='84'>84</option>" +
+"<option value='85'>85</option>" +
+"<option value='86'>86</option>" +
+"<option value='87'>87</option>" +
+"<option value='88'>88</option>" +
+"<option value='89'>89</option>" +
+"<option value='90'>90</option>" +
+"<option value='91'>91</option>" +
+"<option value='92'>92</option>" +
+"<option value='93'>93</option>" +
+"<option value='94'>94</option>" +
+"<option value='95'>95</option>" +
+"<option value='96'>96</option>" +
+"<option value='97'>97</option>" +
+"<option value='98'>98</option>" +
+"<option value='99'>99</option>" +
+"<option value='100'>100</option>" +
+"<option value='101'>101</option>" +
+"<option value='102'>102</option>" +
+"<option value='103'>103</option>" +
+"<option value='104'>104</option>" +
+"<option value='105'>105</option>" +
+"<option value='106'>106</option>" +
+"<option value='107'>107</option>" +
+"<option value='108'>108</option>" +
+"<option value='109'>109</option>" +
+"<option value='110'>110</option>" +
+"<option value='111'>111</option>" +
+"<option value='112'>112</option>" +
+"<option value='113'>113</option>" +
+"<option value='114'>114</option>" +
+"<option value='115'>115</option>" +
+"<option value='116'>116</option>" +
+"<option value='117'>117</option>" +
+"<option value='118'>118</option>" +
+"<option value='119'>119</option>" +
+"<option value='120'>120</option>" +
+"<option value='121'>121</option>" +
+"<option value='122'>122</option>" +
+"<option value='123'>123</option>" +
+"<option value='124'>124</option>" +
+"<option value='125'>125</option>" +
+"<option value='126'>126</option>" +
+"<option value='127'>127</option>" +
+"<option value='128'>128</option>" +
+"<option value='129'>129</option>" +
+"<option value='130'>130</option>" +
+"<option value='131'>131</option>" +
+"<option value='132'>132</option>" +
+"<option value='133'>133</option>" +
+"<option value='134'>134</option>" +
+"<option value='135'>135</option>" +
+"<option value='136'>136</option>" +
+"<option value='137'>137</option>" +
+"<option value='138'>138</option>" +
+"<option value='139'>139</option>" +
+"<option value='140'>140</option>" +
+"<option value='141'>141</option>" +
+"<option value='142'>142</option>" +
+"<option value='143'>143</option>" +
+"<option value='144'>144</option>" +
+"<option value='145'>145</option>" +
+"<option value='146'>146</option>" +
+"<option value='147'>147</option>" +
+"<option value='148'>148</option>" +
+"<option value='149'>149</option>" +
+"<option value='150'>150</option>" +
+"<option value='151'>151</option>" +
+"<option value='152'>152</option>" +
+"<option value='153'>153</option>" +
+"<option value='154'>154</option>" +
+"<option value='155'>155</option>" +
+"<option value='156'>156</option>" +
+"<option value='157'>157</option>" +
+"<option value='158'>158</option>" +
+"<option value='159'>159</option>" +
+"<option value='160'>160</option>" +
+"<option value='161'>161</option>" +
+"<option value='162'>162</option>" +
+"<option value='163'>163</option>" +
+"<option value='164'>164</option>" +
+"<option value='165'>165</option>" +
+"<option value='166'>166</option>" +
+"<option value='167'>167</option>" +
+"<option value='168'>168</option>" +
+"<option value='169'>169</option>" +
+"<option value='170'>170</option>" +
+"<option value='171'>171</option>" +
+"<option value='172'>172</option>" +
+"<option value='173'>173</option>" +
+"<option value='174'>174</option>" +
+"<option value='175'>175</option>" +
+"<option value='176'>176</option>" +
+"<option value='177'>177</option>" +
+"<option value='178'>178</option>" +
+"<option value='179'>179</option>" +
+"<option value='180'>180</option>" +
+"<option value='181'>181</option>" +
+"<option value='182'>182</option>" +
+"<option value='183'>183</option>" +
+"<option value='184'>184</option>" +
+"<option value='185'>185</option>" +
+"<option value='186'>186</option>" +
+"<option value='187'>187</option>" +
+"<option value='188'>188</option>" +
+"<option value='189'>189</option>" +
+"<option value='190'>190</option>" +
+"<option value='191'>191</option>" +
+"<option value='192'>192</option>" +
+"<option value='193'>193</option>" +
+"<option value='194'>194</option>" +
+"<option value='195'>195</option>" +
+"<option value='196'>196</option>" +
+"<option value='197'>197</option>" +
+"<option value='198'>198</option>" +
+"<option value='199'>199</option>" +
+"<option value='200'>200</option>" +
+            "</select>");
 
-      function showAll() {
-        document.getElementById("myInput").value = "";
-        myFunction();
-      }
+      document.getElementById("demo").innerHTML +=
+        "<tr>" +
+        "<td>" +
+        item +
+        "</td>" +
+        "<td>" +
+        "<select id='opt"+i+"''></select>" +
+        "</td>" +
+        "<td>" +
+        price +
+        "</td>" +
+        "<td>" +
+        qty +
+        "</td>" +
+        "<td>" +
+        keywords +
+        "</td>" +
+        "</tr>";
+    }
+  }
+};
 
-    </script>
-
-</html>
+xmlhttp.open(
+  "GET",
+  "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/3/public/full?alt=json",
+  true
+);
+xmlhttp.send();
+</script>
