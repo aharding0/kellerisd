@@ -206,8 +206,15 @@
     function addToOrder(myItem) 
     {
     	var myOption;
-      if(document.getElementById("opt"+myItem)){
-      	myOption = " (" + document.getElementById("opt"+myItem).value + ") ";
+      if(document.getElementById("opt1"+myItem)){
+      	myOption = " with ";
+      	myOption +=  document.getElementById("opt1"+myItem).value;
+        if(document.getElementById("opt2"+myItem)){
+        myOption +=  ", " + document.getElementById("opt2"+myItem).value;
+        }
+        if(document.getElementById("opt3"+myItem)){
+        myOption +=  ", " + document.getElementById("opt3"+myItem).value;
+        }
       }else{myOption="";}
       
       if (itemQty[myItem] > 0) 
