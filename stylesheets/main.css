@@ -13,6 +13,12 @@ input[type="search"]{
     width:70%;
   }
 
+#clearbtn{
+    position:absolute;
+    bottom:15px;
+    right:55px;
+}
+
 #myInput {
   background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
