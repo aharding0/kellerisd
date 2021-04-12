@@ -7,7 +7,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="../stylesheets/main.css">
+    <meta name="theme-color" content="#33b5e5">
+    <link rel="manifest" href="/manifest.json">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/css/perfect-scrollbar.css">
+
     <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse" onsubmit="">
    
         <label>
@@ -106,10 +114,11 @@
 
       <div class="row">
 
-        <div class="col-md-7 mb-4 mb-md-0">
+        <div style="width:95%;" class="col-md-7 mb-4 mb-md-0">
 
 
-
+    <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
+    
           <!-- Table -->
           <table id="myTable" class="table table-striped">
             <thead>
@@ -144,7 +153,7 @@
     var price = [];
     var keywords = [];
     var count = 1;
-    var total;
+    var total=0;
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         let data = JSON.parse(this.responseText).feed.entry;
@@ -307,11 +316,38 @@
         count + ". " + item[myItem] + myOption +
         " - Quantity: " + itemQty[myItem] + "\n"
         count++;
-        document.getElementById("qty"+myItem).selectedIndex = 0;
         total += itemQty[myItem]*price[myItem];
+        document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+        document.getElementById("qty"+myItem).selectedIndex = 0;
+        //console.log(total);
       }
-
+      
+			
     }
+    
+    function myFunction() {
+        var input, filter, table, tr, td, cell, l, m;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (l = 1; l < tr.length; l++) {
+
+          tr[l].style.display = "none";
+
+          td = tr[l].getElementsByTagName("td");
+          for (var m = 0; m < td.length; m++) {
+            cell = tr[l].getElementsByTagName("td")[m];
+            if (cell) {
+              if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[l].style.display = "";
+                break;
+              }
+            }
+          }
+        }
+
+      }
 
   </script>
    <div id="divorder">
@@ -326,7 +362,7 @@
     </span>
     
     <textarea textarea rows="10" cols="40" wrap="hard" type="text" onkeypress="return false;" name="entry.1873909031" id="entry.1873909031" required></textarea>
-    <button id="clearbtn" onclick='document.getElementById("entry.1873909031").innerHTML=""' type="button">Clear My Order</button>
+    <button id="clearbtn" onclick='document.getElementById("entry.1873909031").innerHTML="";document.getElementById("total").innerHTML=total=0;' type="button">Clear My Order</button>
   </label>
   </div>
 
