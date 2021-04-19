@@ -12,35 +12,45 @@
 input[type="search"]{
     width:70%;
   }
+  
+  textarea{
+  display:block;
+}
 
-#myInput {
+#divorder{
+  display:inline-block;
+  position:relative;
+}
+
+
+#gsheet {
   background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
+  padding: 2px 0px 2px 0px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
 
-#myTable {
+#gsheet {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
-  font-size: 15px;
+  font-size: 10px;
 }
 
-#myTable th, #myTable td {
+#gsheet th, #gsheet td {
   text-align: left;
-  padding: 12px;
+  padding: 5px;
 }
 
-#myTable tr {
+#gsheet tr {
   border-bottom: 1px solid #ddd;
 }
 
-#myTable tr.header, #myTable tr:hover {
+#gsheet tr.header, #gsheet tr:hover {
   background-color: #f1f1f1;
 }
 
@@ -160,11 +170,11 @@ th{
   background: white;
 }
 tr>td:nth-child(1){
-  text-align: center;
+  text-align: left;
   color: #0;
 }
 tr>td:nth-child(2){
-  text-align: center;
+  text-align: left;
   color: #ff0000;
 }
 td{
@@ -210,10 +220,10 @@ input[type="checkbox"]
   margin-top: 10px;
   padding: 10px;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   background: #52ad9c;
   color: #fff;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: bold;
 }
 .button:hover{
@@ -224,13 +234,6 @@ input[type="checkbox"]
   label>span
   {
     
-  }
-  #myTable th, #myTable td {
-  text-align: left;
-  padding: 5px;
-}
-  #item{
-    width:100px;
   }
   body{
     font-size: 12px;
@@ -273,15 +276,11 @@ input[type="submit"]
   {
     width: 70%;
   }
-  input[type="button"]{
-    margin-left:15px;
-  }
-  
-select{
-  width: 65px;
-  height: 25px;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  select{
+  width: 75%;
+}
+#entry.619950903{
+  width: 5%;
 }
 
 select option {
@@ -292,4 +291,3 @@ select option {
     margin-left: 22%;
   }
 }
-
