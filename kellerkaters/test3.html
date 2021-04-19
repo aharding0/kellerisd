@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="en">
 
   <head>
@@ -12,23 +14,23 @@
    
         <label>
           <span class="reqname">Name of Requestee: <span class="required">*</span></span>
-          <input type="text" name="entry.1350583608" id="entry.1350583608" maxlength="30" size="30" required>
+          <input type="text" name="entry.1350583608" id="entry.1350583608" placeholder="ex: John Doe" maxlength="30" size="30" required>
         </label>
         <label>
           <span class="facname">Facility Name: <span class="required">*</span></span>
-          <input type="text" name="entry.385453401" id="entry.385453401" maxlength="20" size="20" required>
+          <input type="text" name="entry.385453401" id="entry.385453401" placeholder="ex: Admin Building or provide address" maxlength="20" size="20" required>
         </label>
         <label>
-          <span class="eventloc">Room (be specific): <span class="required">*</span></span>
-          <input type="text" name="entry.502029463" id="entry.502029463" maxlength="20" size="20" required>
+          <span class="eventloc" >Room (be specific): <span class="required">*</span></span>
+          <input type="text" name="entry.502029463" id="entry.502029463" placeholder="ex: Texas I, Lonestar, or use description" maxlength="20" size="20" required>
         </label>
         <label>
           <span class="phonenum">Phone #: <span class="required">*</span></span>
-          <input type="text" name="entry.351618291" id="entry.351618291" maxlength="15" size="15" required>
+          <input type="text" name="entry.351618291" id="entry.351618291" placeholder="ex: 123-456-7890" maxlength="15" size="15" required>
         </label>
         <label>
           <span class="reqdate">Requested Date: <span class="required">*</span></span>
-          <input type="date" style="width:150px" name="entry.454229218" id="entry.454229218" min="2021-04-01" max="2023-01-01" required>
+          <input type="date" style="width:150px" name="entry.454229218" id="entry.454229218" required>
         </label><br>
         <label>
           <span class="seltime">Requested Time: <span class="required">*</span></span>
@@ -99,7 +101,7 @@
         </label>
         <label>
           <span class="numpeople">Number of Attendees: <span class="required">*</span></span>
-          <input type="text" name="entry.2064814677" id="entry.2064814677" maxlength="4" size="4" required>
+          <input type="text" name="entry.2064814677" id="entry.2064814677" placeholder="Enter number of guaranteed people at the event" maxlength="4" size="4" required>
         </label>
 
     <div class="container my-5">
@@ -108,7 +110,7 @@
 
         <div class="col-md-7 mb-4 mb-md-0">
 
-
+          <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
 
           <!-- Table -->
           <table id="gsheet" class="table table-striped">
@@ -180,6 +182,8 @@ document.getElementById("entry.454229218").setAttribute("max", dateMax);
     var keywords = [];
     var count = 1;
     var total=0;
+    
+    
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         let data = JSON.parse(this.responseText).feed.entry;
@@ -321,6 +325,31 @@ document.getElementById("entry.454229218").setAttribute("max", dateMax);
     function setQty(selection) {
       itemQty[selection] = document.getElementById("qty" + selection).value;
     }
+    
+    function myFunction() {
+        var input, filter, table, tr, td, cell, i, j;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("gsheet");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+
+          tr[i].style.display = "none";
+
+          td = tr[i].getElementsByTagName("td");
+          for (var j = 0; j < td.length; j++) {
+            cell = tr[i].getElementsByTagName("td")[j];
+            if (cell) {
+              if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+                break;
+              }
+            }
+          }
+        }
+
+      }    
+    
 
     function addToOrder(myItem) 
     {
@@ -344,17 +373,24 @@ document.getElementById("entry.454229218").setAttribute("max", dateMax);
         count++;
         document.getElementById("qty"+myItem).selectedIndex = 0;
         total += itemQty[myItem]*price[myItem];
-        alert(item[myItem] + " (" + itemQty[myItem] + ")" + " has been added to your order.\n\nYour total is currently: " + "$" + total.toFixed(2));
+        if(document.getElementById("opt1"+myItem))
+        {
+        	alert(item[myItem] + " with " + myOption + " (" + itemQty[myItem] + ")" + " has been added to your order.\n\nYour total is currently: " + "$" + total.toFixed(2));
+        }else{
+        	alert(item[myItem] + " (" + itemQty[myItem] + ")" + " has been added to your order.\n\nYour total is currently: " + "$" + total.toFixed(2));
+        }
+        
         document.getElementById("total").innerHTML = "$" + total.toFixed(2);
       }
 			
     }
+    
 
   </script>
    <div id="divorder">
   <label>
   
-    <span>Order Total: </span><span id="total"></span>
+    <span>Order Total: </span><span id="total">$0.00</span>
     <br>
     <br>
     <br>
