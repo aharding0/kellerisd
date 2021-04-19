@@ -8,7 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="theme-color" content="#33b5e5">
-    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="manifest" href="/manifest.json">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/css/perfect-scrollbar.css">
 
     <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse" onsubmit="">
    
@@ -113,7 +119,7 @@
 
 
           <!-- Table -->
-          <table id="myTable" class="table table-striped">
+          <table id="gsheet" class="table table-striped">
             <thead>
               <tr>
                 <th>Item</th>
@@ -347,6 +353,7 @@ document.getElementById("entry.454229218").setAttribute("max", dateMax);
         document.getElementById("qty"+myItem).selectedIndex = 0;
         total += itemQty[myItem]*price[myItem];
         alert(item[myItem] + " (" + itemQty[myItem] + ")" + " has been added to your order.\n\nYour total is currently: " + "$" + total.toFixed(2));
+        document.getElementById("total").innerHTML = "$" + total.toFixed(2);
       }
 			
     }
@@ -364,7 +371,7 @@ document.getElementById("entry.454229218").setAttribute("max", dateMax);
     </span>
     
     <textarea textarea rows="10" cols="80" wrap="hard" type="text" onkeypress="return false;" name="entry.1873909031" id="entry.1873909031" required></textarea><br>
-    <button id="clearbtn" onclick='document.getElementById("entry.1873909031").innerHTML="";document.getElementById("total").innerHTML="0";total=0;count=1' type="button">Clear My Order</button>
+    <button id="clearbtn" onclick='document.getElementById("entry.1873909031").innerHTML="";total=0;document.getElementById("total").innerHTML="$"+total.toFixed(2);count=1' type="button">Clear My Order</button>
   </label>
   </div>
 
