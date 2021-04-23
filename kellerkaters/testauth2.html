@@ -17,7 +17,7 @@
                 console.log( "signed in: " + auth2.isSignedIn.get() );  
                 auth2.isSignedIn.listen(onSignIn);
                 var button = document.querySelector('#signInButton');
-                button.addEventListener('click', function() {
+                button.addEventListener('load', function() {
                   auth2.signIn();
                 });
             });
