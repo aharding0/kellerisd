@@ -5,7 +5,6 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-      <span id="emailadd" value="Email: "></span>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
       function onSignIn(googleUser) {
@@ -17,11 +16,13 @@
         //console.log('Family Name: ' + profile.getFamilyName());
         //console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
-        document.getElementById("emailadd").value = "Email: " + profile.getEmail();
+        if(profile.getEmail()){
+            alert(profile.getEmail());
+        }
 
         // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
+        //var id_token = googleUser.getAuthResponse().id_token;
+        //console.log("ID Token: " + id_token);
       }
     </script>
   </body>
