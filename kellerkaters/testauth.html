@@ -6,6 +6,7 @@
   </head>
   <body>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <p id="demo"></p>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -16,7 +17,11 @@
         //console.log('Family Name: ' + profile.getFamilyName());
         //console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
-        alert(profile.getEmail());
+        var email = profile.getEmail();
+        if(email.includes("@kellerisd.net"))
+        {
+            document.getElementById("demo").innerHTML = "success";
+        }
         
 
         // The ID token you need to pass to your backend:
