@@ -5,6 +5,16 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
+    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1XulJGqHFkHp3pAXDBBftq2urhUQ5xokCxvupk_bA3Uo/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+        First name:<br>
+        <input type="text" name="entry.935827892" id="entry.935827892"><br>
+        Last name:<br>
+        <input type="text" name="entry.1331858140" id="entry.1331858140">
+        <input type="hidden" name="entry.2122624819" id="entry.2122624819">
+        <input type="submit" value="Submit">
+      </form>
+     
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <p id="demo"></p>
     <script>
@@ -20,7 +30,7 @@
         var email = profile.getEmail();
         if(email.includes("@kellerisd.net"))
         {
-            document.getElementById("demo").innerHTML = "success";
+            document.getElementById("entry.2122624819").value = email;
         }
         
 
@@ -28,6 +38,15 @@
         //var id_token = googleUser.getAuthResponse().id_token;
         //console.log("ID Token: " + id_token);
       }
+
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">var submitted=false;</script>
+    <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Your submission has been processed...');
+    });
+</script>
   </body>
 </html>
