@@ -6,16 +6,17 @@
   </head>
   <body>
     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1XulJGqHFkHp3pAXDBBftq2urhUQ5xokCxvupk_bA3Uo/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-        First name:<br>
+        <label>First name:</label><br>
         <input type="text" name="entry.935827892" id="entry.935827892"><br>
-        Last name:<br>
+        <label>Last name:</label><br>
         <input type="text" name="entry.1331858140" id="entry.1331858140">
         <input type="hidden" name="entry.2122624819" id="entry.2122624819">
         <input type="submit" value="Submit">
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
       </form>
      
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+   
     <p id="demo"></p>
     <script>
       function onSignIn(googleUser) {
@@ -26,7 +27,6 @@
         //console.log('Given Name: ' + profile.getGivenName());
         //console.log('Family Name: ' + profile.getFamilyName());
         //console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
         var email = profile.getEmail();
         if(email.includes("@kellerisd.net"))
         {
@@ -42,9 +42,7 @@
             lastname = profile.getFamilyName();
             document.getElementById("entry.1331858140").value = lastname;
         }
-        // The ID token you need to pass to your backend:
-        //var id_token = googleUser.getAuthResponse().id_token;
-        //console.log("ID Token: " + id_token);
+        
       }
 
     </script>
