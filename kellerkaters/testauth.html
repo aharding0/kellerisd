@@ -141,15 +141,7 @@
 </form>
 </head>  
   <body>
-    <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1XulJGqHFkHp3pAXDBBftq2urhUQ5xokCxvupk_bA3Uo/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-        <label>First name:</label><br>
-        <input type="text" name="entry.935827892" id="entry.935827892"><br>
-        <label>Last name:</label><br>
-        <input type="text" name="entry.1331858140" id="entry.1331858140">
-        <input type="hidden" name="entry.2122624819" id="entry.2122624819">
-        <input type="submit" value="Submit"><br><br>
-        <input type="button" value="Sign Out" onclick="signOut()"><br><br>
-      </form>
+    
       <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark"></div>
      
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
@@ -162,7 +154,7 @@
           $('#gform *').fadeOut(2000);
           $('#gform').prepend('Your order form has been submitted successfully.');
       });
-  </script>
+      </script>
     </body>
     <script>
         document.getElementById("gform").style.display = "none";
