@@ -141,7 +141,7 @@
   <!-- Hidden total value amount for form data submission -->
   <input type="hidden" name="entry.207412044" id="entry.207412044">
 
-<input type="submit" value="Submit Order" onsubmit="document.getElementById('entry.207412044').value=total;submitted=true;">
+<input type="submit" value="Submit Order" onsubmit="submit();">
 </form>
 </head>  
   <body>
@@ -439,6 +439,11 @@
           document.getElementById("totalAmt").innerHTML = "$" + total.toFixed(2);
         }
         
+      }
+      function submit(){
+        document.getElementById('entry.207412044').value=document.getElementById("totalAmt").value;
+        console.log(document.getElementById('entry.207412044').value);
+        submitted=true;
       }
 
     </script>
