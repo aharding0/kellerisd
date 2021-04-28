@@ -144,7 +144,8 @@
   <body>
     
       <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark"></div>
-     
+      <p id="denymsg"></p>
+
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -173,13 +174,12 @@
         {
             document.getElementById("entry.328273392").value = email;
             document.getElementById("gform").style.display = "block";
-        }
-        else{signOut();}
-
-        if(profile.getName()){
             document.getElementById("entry.1350583608").value = profile.getName();
+            document.getElementById("entry.1350583608").readOnly = true;
         }
-        
+        else{signOut();
+            document.getElementById("denymsg").innerHTML = "You must sign into a kellerisd.net email account."
+        }
       }
 
     function signOut() {
