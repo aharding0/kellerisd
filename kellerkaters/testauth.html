@@ -3,7 +3,143 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="104792764153-p2lcgg3f1phjc4etgb1u8phr76qn502k.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-  </head>
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse" onsubmit="">
+   
+        <label>
+          <span class="reqname">Name of Requestee: <span class="required">*</span></span>
+          <input type="text" name="entry.1350583608" id="entry.1350583608" placeholder="ex: John Doe" maxlength="30" size="30" required>
+        </label>
+        <label>
+          <span class="facname">Facility Name: <span class="required">*</span></span>
+          <input type="text" name="entry.385453401" id="entry.385453401" placeholder="ex: Admin Building or provide address" maxlength="20" size="20" required>
+        </label>
+        <label>
+          <span class="eventloc" >Room (be specific): <span class="required">*</span></span>
+          <input type="text" name="entry.502029463" id="entry.502029463" placeholder="ex: Texas I, Lonestar, or use description" maxlength="20" size="20" required>
+        </label>
+        <label>
+          <span class="phonenum">Phone #: <span class="required">*</span></span>
+          <input type="text" name="entry.351618291" id="entry.351618291" placeholder="ex: 123-456-7890" maxlength="15" size="15" required>
+        </label>
+        <label>
+          <span class="reqdate">Requested Date: <span class="required">*</span></span>
+          <input type="date" style="width:150px" name="entry.454229218" id="entry.454229218" required>
+        </label><br>
+        <label>
+          <span class="seltime">Requested Time: <span class="required">*</span></span>
+          <select name="entry.619950903" id="entry.619950903" style="width:100px;" required>
+            <option disabled selected value> ----- </option>
+            <option value="7:00">7:00 AM</option>
+            <option value="7:15">7:15 AM</option>
+            <option value="7:30">7:30 AM</option>
+            <option value="7:45">7:45 AM</option>
+            <option value="8:00">8:00 AM</option>
+            <option value="8:15">8:15 AM</option>
+            <option value="8:30">8:30 AM</option>
+            <option value="8:45">8:45 AM</option>
+            <option value="9:00">9:00 AM</option>
+            <option value="9:15">9:15 AM</option>
+            <option value="9:30">9:30 AM</option>
+            <option value="9:45">9:45 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="10:15">10:15 AM</option>
+            <option value="10:30">10:30 AM</option>
+            <option value="10:45">10:45 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="11:15">11:15 AM</option>
+            <option value="11:30">11:30 AM</option>
+            <option value="11:45">11:45 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="12:15">12:15 PM</option>
+            <option value="12:30">12:30 PM</option>
+            <option value="12:45">12:45 PM</option>
+            <option value="13:00">1:00 PM</option>
+            <option value="13:15">1:15 PM</option>
+            <option value="13:30">1:30 PM</option>
+            <option value="13:45">1:45 PM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="14:15">2:15 PM</option>
+            <option value="14:30">2:30 PM</option>
+            <option value="14:45">2:45 PM</option>
+            <option value="15:00">3:00 PM</option>
+            <option value="15:15">3:15 PM</option>
+            <option value="15:30">3:30 PM</option>
+            <option value="15:45">3:45 PM</option>
+            <option value="16:00">4:00 PM</option>
+            <option value="16:15">4:15 PM</option>
+            <option value="16:30">4:30 PM</option>
+            <option value="16:45">4:45 PM</option>
+            <option value="17:00">5:00 PM</option>
+            <option value="17:15">5:15 PM</option>
+            <option value="17:30">5:30 PM</option>
+            <option value="17:45">5:45 PM</option>
+            <option value="18:00">6:00 PM</option>
+            <option value="18:15">6:15 PM</option>
+            <option value="18:30">6:30 PM</option>
+            <option value="18:45">6:45 PM</option>
+            <option value="19:00">7:00 PM</option>
+            <option value="19:15">7:15 PM</option>
+            <option value="19:30">7:30 PM</option>
+            <option value="19:45">7:45 PM</option>
+            <option value="20:00">8:00 PM</option>
+            <option value="20:15">8:15 PM</option>
+            <option value="20:30">8:30 PM</option>
+            <option value="20:45">8:45 PM</option>
+            <option value="21:00">9:00 PM</option>
+            <option value="21:15">9:15 PM</option>
+            <option value="21:30">9:30 PM</option>
+            <option value="21:45">9:45 PM</option>
+            <option value="22:00">10:00 PM</option>
+          </select>
+        </label>
+        <label>
+          <span class="numpeople">Number of Attendees: <span class="required">*</span></span>
+          <input type="text" name="entry.2064814677" id="entry.2064814677" placeholder="Enter number of guaranteed people at the event" maxlength="4" size="4" required>
+        </label>
+
+    <div class="container my-5">
+
+            <input type="search" style="" id="myInput" onkeyup="myFunction();" onchange="myFunction();" onkeypress="myFunction();" onpaste="myFunction();" oninput="myFunction();" onsearch="this.onkeyup();" placeholder="Search" title="">
+
+          <!-- Table -->
+          <table id="gsheet" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Options</th>
+                <th></th>
+                <th></th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th></th>
+                <th>Keywords</th>
+              </tr>
+            </thead>
+            <tbody id="gsheet1"></tbody>
+          </table>
+
+        </div>
+  
+   <div id="divorder">
+  <label>
+  
+    <span>Order Total: </span><span id="entry.207412044">$0.00</span>
+    <br>
+    <br>
+    <br>
+ 
+    <span class="displayorder">Order: <br><br>
+    </span>
+    
+    <textarea textarea rows="10" cols="80" wrap="hard" type="text" onkeypress="return false;" name="entry.1873909031" id="entry.1873909031" required></textarea><br>
+    <button id="clearbtn" onclick='document.getElementById("entry.1873909031").innerHTML="";total=0;document.getElementById("entry.207412044").innerHTML="$"+total.toFixed(2);count=1' type="button">Clear My Order</button>
+  </label>
+  </div>
+
+<input type="submit" value="Submit Order" onsubmit="submitted=true;">
+</form>
+</head>  
   <body>
     <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1XulJGqHFkHp3pAXDBBftq2urhUQ5xokCxvupk_bA3Uo/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
         <label>First name:</label><br>
@@ -12,14 +148,16 @@
         <input type="text" name="entry.1331858140" id="entry.1331858140">
         <input type="hidden" name="entry.2122624819" id="entry.2122624819">
         <input type="submit" value="Submit"><br><br>
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
         <input type="button" value="Sign Out" onclick="signOut()"><br><br>
       </form>
+      <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark"></div>
      
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-   
+      
     <p id="demo"></p>
     <script>
+        document.getElementById("gform").style.display = "none";
+
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -32,6 +170,7 @@
         if(email.includes("@kellerisd.net"))
         {
             document.getElementById("entry.2122624819").value = email;
+            document.getElementById("gform").style.display = "block";
         }
         else{signOut();}
         var firstname = "";
@@ -50,6 +189,8 @@
     function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
+    document.getElementById("entry.935827892").value = "";
+    document.getElementById("entry.1331858140").value = "";
     console.log('User signed out.');
     });
   }
