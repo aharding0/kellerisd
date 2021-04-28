@@ -154,7 +154,16 @@
      
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       
-    <p id="demo"></p>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script type="text/javascript">var submitted=false;</script>
+      <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+          $(window).scrollTop(0);
+          $('#gform *').fadeOut(2000);
+          $('#gform').prepend('Your order form has been submitted successfully.');
+      });
+  </script>
+    </body>
     <script>
         document.getElementById("gform").style.display = "none";
 
@@ -195,15 +204,252 @@
     });
   }
 
+   //setting min max date request to 6 
+   var today = new Date();
+      var dateMax = new Date();
+      var dd = today.getDate();
+      var dd2 = dateMax.getDate();
+      var mm = today.getMonth()+1; //January is 0!
+      var mm2 = dateMax.getMonth()+1;
+      var yyyy = today.getFullYear();
+      var yyyy2 = dateMax.getFullYear();
+      
+      if(mm+6 > 12){
+        mm2 = mm-6;
+        yyyy2 = yyyy+1;
+      }else{
+        mm2 = mm+6;
+      }
+  
+   if(dd<10){
+          dd='0'+dd;
+          dd2='0'+dd;
+      } 
+      if(mm<10){
+          mm='0'+mm;
+      }
+      if(mm2<10){
+      mm2='0'+mm2;
+      }
+  
+  today = yyyy+'-'+mm+'-'+dd;
+  document.getElementById("entry.454229218").setAttribute("min", today);
+  dateMax = yyyy2+'-'+mm2+'-'+dd2;
+  document.getElementById("entry.454229218").setAttribute("max", dateMax);
+    
+      let xmlhttp = new XMLHttpRequest();
+      var itemQty = [];
+      var item = [];
+      var options1 = [];
+      var options2 = [];
+      var options3 = [];
+      var price = [];
+      var keywords = [];
+      var count = 1;
+      var total=0;
+      
+      
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let data = JSON.parse(this.responseText).feed.entry;
+          let i, j,k;
+  
+  
+          for (i = 0; i < data.length; i++) {
+            item.push(data[i]["gsx$item"]["$t"]);
+            options1.push(data[i]["gsx$options1"]["$t"]);
+            options2.push(data[i]["gsx$options2"]["$t"]);
+            options3.push(data[i]["gsx$options3"]["$t"]);
+            price.push(data[i]["gsx$price"]["$t"]);
+            keywords.push(data[i]["gsx$keywords"]["$t"]);
+  
+            let qty, btn;
+            let optionsList1 = [];
+            let optionsList2 = [];
+            let optionsList3 = [];
+            let optionsDropdown1 = "";
+            let optionsDropdown2 = "";
+            let optionsDropdown3 = "";
+            itemQty[i] = 0;
+  
+            //split options into a list which is reset in forloop. catch empty string as null ie. no options for that item
+            optionsList1 = options1[i].split(",");
+            if (options1[i].split(",") == "") {
+              optionsList1 = null;
+            }
+            optionsList2 = options2[i].split(",");
+            if (options2[i].split(",") == "") {
+              optionsList2 = null;
+            }
+            optionsList3 = options3[i].split(",");
+            if (options3[i].split(",") == "") {
+              optionsList3 = null;
+            }
+  
+            // if optionsList is not null/empty then now its time to make the option list
+            if (optionsList1) {
+              //outside for-loop need to begin dropdown tag
+              optionsDropdown1 += "<select id='opt1" + i + "''>";
+  
+              //for loop going through the comma , separated list of options
+              for (j = 0; j < optionsList1.length; j++) {
+  
+                //call each option from array and add to dropdown
+                optionsDropdown1 += "<option>" + optionsList1[j] + "</option>";
+  
+              }
+              //outside end of for-loop leave tailing/end dropdown tag
+              optionsDropdown1 += "</select>";
+            } else {
+              //empty list - no option/dropdown desired
+              optionsDropdown1 = "";
+            }
+            if (optionsList2) {
+              //outside for-loop need to begin dropdown tag
+              optionsDropdown2 += "<select id='opt2" + i + "''>";
+  
+              //for loop going through the comma , separated list of options
+              for (j = 0; j < optionsList2.length; j++) {
+  
+                //call each option from array and add to dropdown
+                optionsDropdown2 += "<option>" + optionsList2[j] + "</option>";
+  
+              }
+              //outside end of for-loop leave tailing/end dropdown tag
+              optionsDropdown2 += "</select>";
+            } else {
+              //empty list - no option/dropdown desired
+              optionsDropdown2 = "";
+            }
+            if (optionsList3) {
+              //outside for-loop need to begin dropdown tag
+              optionsDropdown3 += "<select id='opt3" + i + "''>";
+  
+              //for loop going through the comma , separated list of options
+              for (j = 0; j < optionsList3.length; j++) {
+  
+                //call each option from array and add to dropdown
+                optionsDropdown3 += "<option>" + optionsList3[j] + "</option>";
+  
+              }
+              //outside end of for-loop leave tailing/end dropdown tag
+              optionsDropdown3 += "</select>";
+            } else {
+              //empty list - no option/dropdown desired
+              optionsDropdown3 = "";
+            }
+            
+            qty = "<select onchange='setQty(" + i + ")' id='qty" + i + "'><option value='0'>---</option>"
+           for (k=1;k<=200;k++)
+           {
+             qty+="<option value='"+k+"''>"+k+"</option>";
+           }
+  
+            btn = "<button onclick='addToOrder(" + i + ")'type='button'>Add</button>"
+  
+            document.getElementById("gsheet1").innerHTML +=
+              "<tr>" +
+              "<td>" +
+              item[i] +
+              "</td>" +
+              "<td>" +
+              optionsDropdown1 +
+              "</td>" +
+              "<td>" +
+              optionsDropdown2 +
+              "</td>" +
+              "<td>" +
+              optionsDropdown3 +
+              "</td>" +
+              "<td>" +
+              price[i] +
+              "</td>" +
+              "<td>" +
+              qty +
+              "</td>" +
+              "<td>" +
+              btn +
+              "</td>" +
+              "<td>" +
+              keywords[i] +
+              "</td>" +
+              "</tr>";
+              
+              price[i]= price[i].replace(/[$]/g, "");
+          }
+        }
+      };
+  
+      xmlhttp.open(
+        "GET",
+        "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/3/public/full?alt=json",
+        true
+      );
+      xmlhttp.send();
+  
+      function setQty(selection) {
+        itemQty[selection] = document.getElementById("qty" + selection).value;
+      }
+      
+      function myFunction() {
+          var input, filter, table, tr, td, cell, i, j;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("gsheet");
+          tr = table.getElementsByTagName("tr");
+          for (i = 1; i < tr.length; i++) {
+  
+            tr[i].style.display = "none";
+  
+            td = tr[i].getElementsByTagName("td");
+            for (var j = 0; j < td.length; j++) {
+              cell = tr[i].getElementsByTagName("td")[j];
+              if (cell) {
+                if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                  break;
+                }
+              }
+            }
+          }
+  
+        }    
+      
+  
+      function addToOrder(myItem) 
+      {
+        var myOption;
+        if(document.getElementById("opt1"+myItem)){
+          myOption = " with ";
+          myOption +=  document.getElementById("opt1"+myItem).value;
+          if(document.getElementById("opt2"+myItem)){
+          myOption +=  ", " + document.getElementById("opt2"+myItem).value;
+          }
+          if(document.getElementById("opt3"+myItem)){
+          myOption +=  ", " + document.getElementById("opt3"+myItem).value;
+          }
+        }else{myOption="";}
+        
+        if (itemQty[myItem] > 0) 
+        {
+          document.getElementById("entry.1873909031").innerHTML += 
+          count + ". " + item[myItem] + myOption +
+          "\nQuantity: " + itemQty[myItem] + "\n\n"
+          count++;
+          document.getElementById("qty"+myItem).selectedIndex = 0;
+          total += itemQty[myItem]*price[myItem];
+          if(document.getElementById("opt1"+myItem))
+          {
+            alert(item[myItem] + " with " + myOption + " (" + itemQty[myItem] + ")" + " has been added to your order.\n\nYour total is currently: " + "$" + total.toFixed(2));
+          }else{
+            alert(item[myItem] + " (" + itemQty[myItem] + ")" + " has been added to your order.\n\nYour total is currently: " + "$" + total.toFixed(2));
+          }
+          
+          document.getElementById("entry.207412044").innerHTML = "$" + total.toFixed(2);
+        }
+        
+      }
+
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript">var submitted=false;</script>
-    <script type="text/javascript">
-    $('#gform').on('submit', function(e) {
-        $(window).scrollTop(0);
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your order form has been submitted successfully.');
-    });
-</script>
-  </body>
+    
 </html>
