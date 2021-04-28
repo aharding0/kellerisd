@@ -10,6 +10,7 @@
           <span class="reqname">Name of Requestee: <span class="required">*</span></span>
           <input type="text" name="entry.1350583608" id="entry.1350583608" placeholder="ex: John Doe" maxlength="30" size="30" required>
         </label>
+        <input type="hidden" name="entry.328273392" id="entry.328273392">
         <label>
           <span class="facname">Facility Name: <span class="required">*</span></span>
           <input type="text" name="entry.385453401" id="entry.385453401" placeholder="ex: Admin Building or provide address" maxlength="20" size="20" required>
@@ -170,19 +171,13 @@
         var email = profile.getEmail();
         if(email.includes("@kellerisd.net"))
         {
-            document.getElementById("entry.2122624819").value = email;
+            document.getElementById("entry.328273392").value = email;
             document.getElementById("gform").style.display = "block";
         }
         else{signOut();}
-        var firstname = "";
-        var lastname = "";
-        if(profile.getGivenName()){
-            firstname = profile.getGivenName();
-            document.getElementById("entry.935827892").value = firstname;
-        }
-        if(profile.getGivenName()){
-            lastname = profile.getFamilyName();
-            document.getElementById("entry.1331858140").value = lastname;
+
+        if(profile.getName()){
+            document.getElementById("entry.1350583608").value = profile.getName();
         }
         
       }
