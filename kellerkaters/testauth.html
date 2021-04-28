@@ -437,7 +437,8 @@
           }
           
           document.getElementById("totalAmt").innerHTML = "$" + total.toFixed(2);
-          document.getElementById('entry.207412044').value=document.getElementById('totalAmt').value;
+          document.getElementById('entry.207412044').value = document.getElementById('totalAmt').innerHTML;
+          console.log(document.getElementById('entry.207412044').value);
         }
         
       }
