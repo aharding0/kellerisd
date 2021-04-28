@@ -4,7 +4,7 @@
     <meta name="google-signin-client_id" content="104792764153-p2lcgg3f1phjc4etgb1u8phr76qn502k.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="stylesheet" href="../stylesheets/main.css">
-    <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse?"  target="hidden_iframe" onsubmit="document.getElementById('entry.207412044').value=document.getElementById('totalAmt').value;submitted=true;">
+    <form name="gform" id="gform" method="get" enctype="text/plain" action="https://docs.google.com/forms/d/1O8IK0CMt_ijDpFhnqUBHYqVk-Q2a_Yc-xisyVjLsKAc/formResponse?"  target="hidden_iframe" onsubmit="submitted=true;">
    
         <label>
           <span class="reqname">Name of Requestee: <span class="required">*</span></span>
@@ -437,6 +437,7 @@
           }
           
           document.getElementById("totalAmt").innerHTML = "$" + total.toFixed(2);
+          document.getElementById('entry.207412044').value=document.getElementById('totalAmt').value;
         }
         
       }
