@@ -10,6 +10,7 @@
           <span class="reqname">Name of Requestee: <span class="required">*</span></span>
           <input type="text" name="entry.1350583608" id="entry.1350583608" placeholder="ex: John Doe" maxlength="30" size="30" required>
         </label>
+        <!-- Hidden email field to be submitted with form -->
         <input type="hidden" name="entry.328273392" id="entry.328273392">
         <label>
           <span class="facname">Facility Name: <span class="required">*</span></span>
@@ -146,9 +147,10 @@
 </head>  
   <body>
     <div class="container"></div>
-    <div class="vertical-center"><div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark"></div></div>
-      
+    <div class="vertical-center"><div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark">
       <p id="denymsg"></p>
+    </div>
+  </div>      
 
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       
