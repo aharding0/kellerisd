@@ -147,7 +147,10 @@
 </head>  
   <body>
     <div class="container"></div>
-    <div class="vertical-center"><div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark">
+    <div class="vertical-center">
+      <p>You must sign in to a kellerisd.net account to fill out our online form. For all other order requests, please contact us directly.</p>
+      <p>Please sign in using the Google Sign-In button below:</p><br>
+      <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark">
       <p id="denymsg"></p>
     </div>
   </div>      
@@ -185,7 +188,7 @@
             document.getElementById("gSignin").style.display = "none";
         }
         else{signOut();
-            document.getElementById("denymsg").innerHTML = "You must sign into a kellerisd.net email account."
+            document.getElementById("denymsg").innerHTML = "Error loading form: You must sign into a kellerisd.net email account."
         }
       }
 
