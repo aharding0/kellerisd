@@ -182,8 +182,6 @@
         if(email.includes("@kellerisd.net"))
         {
             document.getElementById("entry.328273392").value = email;
-            console.log(email);
-            console.log(document.getElementById("entry.328273392").value);
             document.getElementById("gform").style.display = "block";
             document.getElementById("entry.1350583608").value = profile.getName();
             document.getElementById("entry.1350583608").readOnly = true;
@@ -191,15 +189,16 @@
             document.getElementById("p1").style.display = "none";
         }
         else{signOut();
-            document.getElementById("denymsg").innerHTML = "Error loading form: You must sign into a kellerisd.net email account. Try again."
+            document.getElementById("denymsg").innerHTML = "Error loading form: You must sign into a kellerisd.net email account. Try again.";
         }
       }
 
     function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-    document.getElementById("entry.935827892").value = "";
-    document.getElementById("entry.1331858140").value = "";
+    auth2.disconnect();
+    //document.getElementById("entry.935827892").value = "";
+    //document.getElementById("entry.1331858140").value = "";
     console.log('User signed out.');
     });
   }
