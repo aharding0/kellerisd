@@ -170,6 +170,13 @@
     <script>
         document.getElementById("gform").style.display = "none";
 
+        //test auth2 object is not loaded fix
+        if(!gapi.auth2){
+        gapi.load('auth2', function() {
+        gapi.auth2.init();
+        });
+        }
+
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
