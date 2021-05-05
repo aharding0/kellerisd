@@ -32,9 +32,9 @@
   
   
           for (i = 0; i < data.length; i++) {
-            header1.push(data[i]["gsx$item"]["$t"]);
-            header2.push(data[i]["gsx$price"]["$t"]);
-            header3.push(data[i]["gsx$description"]["$t"]);
+            item.push(data[i]["gsx$item"]["$t"]);
+            price.push(data[i]["gsx$price"]["$t"]);
+            description.push(data[i]["gsx$description"]["$t"]);
       
             document.getElementById("gsheet1").innerHTML +=
               "<tr>" +
