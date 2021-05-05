@@ -1,27 +1,29 @@
 <html lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <head>
+        
+        <table id="gsheet" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="gsheet1"></tbody>
+        </table>
     </head>
     <link rel="stylesheet" href="../stylesheets/menu.css">
     
     <body>
-        <table id="gsheet" class="table table-striped">
-            <thead>
-              <tr>
-                <th>Header1</th>
-                <th>Header2</th>
-                <th>Header3</th>
-              </tr>
-            </thead>
-            <tbody id="gsheet1"></tbody>
-          </table>
     </body>
     <script>
        
     
       let xmlhttp = new XMLHttpRequest();
-      var header1 = [];
-      var header2 = [];
-      var header3 = [];      
+      var item = [];
+      var price = [];
+      var description = [];      
       
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -30,20 +32,20 @@
   
   
           for (i = 0; i < data.length; i++) {
-            header1.push(data[i]["gsx$header1"]["$t"]);
-            header2.push(data[i]["gsx$header2"]["$t"]);
-            header3.push(data[i]["gsx$header3"]["$t"]);
+            header1.push(data[i]["gsx$item"]["$t"]);
+            header2.push(data[i]["gsx$price"]["$t"]);
+            header3.push(data[i]["gsx$description"]["$t"]);
       
             document.getElementById("gsheet1").innerHTML +=
               "<tr>" +
               "<td>" +
-              header1[i] +
+              item[i] +
               "</td>" +
               "<td>" +
-              header2[i] +
+              price[i] +
               "</td>" +
               "<td>" +
-              header3[i] +
+              description[i] +
               "</td>" +
               "</tr>";
               
