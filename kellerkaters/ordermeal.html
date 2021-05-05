@@ -171,11 +171,15 @@
         document.getElementById("gform").style.display = "none";
 
         //test auth2 object is not loaded fix
-        if(!gapi.auth2){
-        gapi.load('auth2', function() {
-        gapi.auth2.init();
-        });
-        }
+        gapi.load('auth2', initSigninV2);
+
+function initSigninV2() {
+    gapi.auth2.init({
+        client_id: '104792764153-p2lcgg3f1phjc4etgb1u8phr76qn502k.apps.googleusercontent.com'
+    }).then(function (authInstance) {
+        // now auth2 is fully initialized
+    });
+}
 
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
