@@ -1,0 +1,62 @@
+<html lang="en">
+    <head>
+    </head>
+    <link rel="stylesheet" href="../stylesheets/menu.css">
+    
+    <body>
+        <table id="gsheet" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Header1</th>
+                <th>Header2</th>
+                <th>Header3</th>
+              </tr>
+            </thead>
+            <tbody id="gsheet1"></tbody>
+          </table>
+    </body>
+    <script>
+       
+    
+      let xmlhttp = new XMLHttpRequest();
+      var header1 = [];
+      var header2 = [];
+      var header3 = [];      
+      
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let data = JSON.parse(this.responseText).feed.entry;
+          let i,j,k;
+  
+  
+          for (i = 0; i < data.length; i++) {
+            header1.push(data[i]["gsx$header1"]["$t"]);
+            header2.push(data[i]["gsx$header2"]["$t"]);
+            header3.push(data[i]["gsx$header3"]["$t"]);
+      
+            document.getElementById("gsheet1").innerHTML +=
+              "<tr>" +
+              "<td>" +
+              header1[i] +
+              "</td>" +
+              "<td>" +
+              header2[i] +
+              "</td>" +
+              "<td>" +
+              header3[i] +
+              "</td>" +
+              "</tr>";
+              
+          }
+        }
+      };
+  
+      xmlhttp.open(
+        "GET",
+        "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/5/public/full?alt=json",
+        true
+      );
+      xmlhttp.send();
+    </script>
+    
+</html>
