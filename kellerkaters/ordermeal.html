@@ -150,6 +150,7 @@
     <div class="center">
       <p id="p1">You must sign in to a kellerisd.net account to fill out our online form.<br> For all other order requests, please contact us directly.
         <br><br>Please sign in using the Google Sign-In button below:</p><br><br>
+        <p id="denymsg"> </p>
       <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark">
     </div>
   </div>      
@@ -201,7 +202,7 @@ function initSigninV2() {
         else{//signOut();
           var auth2 = gapi.auth2.getAuthInstance();
           auth2.disconnect();
-          console.log(document.getElementById("p1").innerHTML);
+          console.log(document.getElementById("denymsg").innerHTML = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         }
       }
 
