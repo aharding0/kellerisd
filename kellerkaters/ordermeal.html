@@ -149,8 +149,8 @@
     <div class="googlecontainer"></div>
     <div class="center">
       <p id="p1">You must sign in to a kellerisd.net account to fill out our online form.<br> For all other order requests, please contact us directly.
-        <br><br>Please sign in using the Google Sign-In button below:</p><br><br>
-        <p id="denymsg"> </p>
+        <br><br>Please sign in using the Google Sign-In button below:</p><br>
+        <p id="denymsg" style="color: red;"> </p><br>
       <div class="g-signin2" id="gSignin" data-onsuccess="onSignIn" data-theme="dark">
     </div>
   </div>      
@@ -198,11 +198,12 @@ function initSigninV2() {
             document.getElementById("entry.1350583608").readOnly = true;
             document.getElementById("gSignin").style.display = "none";
             document.getElementById("p1").style.display = "none";
+            document.getElementById("denymsg").style.display = "none";
         }
         else{//signOut();
           var auth2 = gapi.auth2.getAuthInstance();
           auth2.disconnect();
-          console.log(document.getElementById("denymsg").innerHTML = "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+          document.getElementById("denymsg").innerHTML = "Error loading form: You must sign into a kellerisd.net email account. Try again.";
         }
       }
 
