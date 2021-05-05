@@ -195,7 +195,9 @@
             document.getElementById("gSignin").style.display = "none";
             document.getElementById("p1").style.display = "none";
         }
-        else{signOut();
+        else{//signOut();
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.disconnect();
             //document.getElementById("denymsg").innerHTML = "Error loading form: You must sign into a kellerisd.net email account. Try again.";
         }
       }
