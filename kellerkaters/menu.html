@@ -26,7 +26,7 @@
           <a class="nav-link" id="meal-tab" data-toggle="tab" href="#meal" role="tab">Meal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="dessert-tab" data-toggle="tab" href="#dinner" role="tab">Dessert</a>
+          <a class="nav-link" id="dessert-tab" data-toggle="tab" href="#dessert" role="tab">Dessert</a>
         </li>
       </ul>
     </div>
@@ -34,21 +34,27 @@
       <div class="tab-content col-lg-12" id="myTabContent">
         <!-- SNACK -->
         <div class="tab-pane fade show active" id="snack" role="tabpanel" aria-labelledby="snack-tab">
-          <div id="test" class="row">
+            <div id="snackcontent" class="row">
 							
           </div>
         </div>
         <!-- BREAKFAST -->
         <div class="tab-pane fade" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
-
+            <div id="breakfastcontent" class="row">
+							
+            </div>
         </div>
         <!-- MEAL -->
         <div class="tab-pane fade" id="meal" role="tabpanel" aria-labelledby="meal-tab">
-
+            <div id="mealcontent" class="row">
+							
+            </div>
         </div>
         <!-- DESSERT -->
         <div class="tab-pane fade" id="dessert" role="tabpanel" aria-labelledby="dessert-tab">
-
+            <div id="dessertcontent" class="row">
+							
+            </div>
         </div>
       </div>
       <!--<a href="#" class=" menu_btn btn btn-danger">view more</a>-->
@@ -56,34 +62,110 @@
   </div>
 </section>
 <script>
-  let xmlhttp = new XMLHttpRequest();
-  var item = [];
-  var price = [];
-  var description = [];
-  var imgsrc = [];
+  let xmlhttp0 = new XMLHttpRequest();
+  var snackitem = [];
+  var snackprice = [];
+  var snackdescription = [];
+  var snackimgsrc = [];
 
-  xmlhttp.onreadystatechange = function() {
+  xmlhttp0.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      let data = JSON.parse(this.responseText).feed.entry;
-      let i, j, k;
+      let data0 = JSON.parse(this.responseText).feed.entry;
+      let i, j;
 
       
-      for (i = 0; i < data.length; i++) {
-        item.push(data[i]["gsx$item"]["$t"]);
-        price.push(data[i]["gsx$price"]["$t"]);
-        description.push(data[i]["gsx$description"]["$t"]);
-        imgsrc.push(data[i]["gsx$imgsrc"]["$t"]);
-        document.getElementById("test").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+imgsrc[i]+"' alt="+item[i]+"><div class='menu_content'><h4>"+item[i]+"<span>"+price[i]+"</span></h4><p>"+description[i]+"</p></div></div></div>";
+      for (i = 0, j = data0.length; i < j; i += 1) {
+        snackitem.push(data0[i]["gsx$item"]["$t"]);
+        snackprice.push(data0[i]["gsx$price"]["$t"]);
+        snackdescription.push(data0[i]["gsx$description"]["$t"]);
+        snackimgsrc.push(data0[i]["gsx$imgsrc"]["$t"]);
+        document.getElementById("snackcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+snackimgsrc[i]+"' alt="+snackitem[i]+"><div class='menu_content'><h4>"+snackitem[i]+"<span>"+snackprice[i]+"</span></h4><p>"+snackdescription[i]+"</p></div></div></div>";
       }
       
     }
   };
 
-  xmlhttp.open(
-    "GET",
-    "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/5/public/full?alt=json",
-    true
-  );
-  xmlhttp.send();
+  let xmlhttp1 = new XMLHttpRequest();
+  var breakfastitem = [];
+  var breakfastprice = [];
+  var breakfastdescription = [];
+  var breakfastimgsrc = [];
+
+  xmlhttp1.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let data1 = JSON.parse(this.responseText).feed.entry;
+      let i, j;
+
+      
+      for (i = 0, j = data1.length; i < j; i += 1) {
+        breakfastitem.push(data1[i]["gsx$item"]["$t"]);
+        breakfastprice.push(data1[i]["gsx$price"]["$t"]);
+        breakfastdescription.push(data1[i]["gsx$description"]["$t"]);
+        breakfastimgsrc.push(data1[i]["gsx$imgsrc"]["$t"]);
+        document.getElementById("breakfastcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+breakfastimgsrc[i]+"' alt="+breakfastitem[i]+"><div class='menu_content'><h4>"+breakfastitem[i]+"<span>"+breakfastprice[i]+"</span></h4><p>"+breakfastdescription[i]+"</p></div></div></div>";
+      }
+      
+    }
+  };
+
+  let xmlhttp2 = new XMLHttpRequest();
+  var mealitem = [];
+  var mealprice = [];
+  var mealdescription = [];
+  var mealimgsrc = [];
+
+  xmlhttp2.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let data2 = JSON.parse(this.responseText).feed.entry;
+      let i, j;
+
+      
+      for (i = 0, j = data2.length; i < j; i += 1) {
+        mealitem.push(data2[i]["gsx$item"]["$t"]);
+        mealprice.push(data2[i]["gsx$price"]["$t"]);
+        mealdescription.push(data2[i]["gsx$description"]["$t"]);
+        mealimgsrc.push(data2[i]["gsx$imgsrc"]["$t"]);
+        document.getElementById("mealcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+mealimgsrc[i]+"' alt="+mealitem[i]+"><div class='menu_content'><h4>"+mealitem[i]+"<span>"+mealprice[i]+"</span></h4><p>"+mealdescription[i]+"</p></div></div></div>";
+      }
+      
+    }
+  };
+
+  let xmlhttp3 = new XMLHttpRequest();
+  var dessertitem = [];
+  var dessertprice = [];
+  var dessertdescription = [];
+  var dessertimgsrc = [];
+
+  xmlhttp3.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let data3 = JSON.parse(this.responseText).feed.entry;
+      let i, j;
+
+      
+      for (i = 0, j = data3.length; i < j; i += 1) {
+        dessertitem.push(data3[i]["gsx$item"]["$t"]);
+        dessertprice.push(data3[i]["gsx$price"]["$t"]);
+        dessertdescription.push(data3[i]["gsx$description"]["$t"]);
+        dessertimgsrc.push(data3[i]["gsx$imgsrc"]["$t"]);
+        document.getElementById("dessertcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+dessertimgsrc[i]+"' alt="+dessertitem[i]+"><div class='menu_content'><h4>"+dessertitem[i]+"<span>"+dessertprice[i]+"</span></h4><p>"+dessertdescription[i]+"</p></div></div></div>";
+      }
+      
+    }
+  };
+
+  var url0 = "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/5/public/full?alt=json";
+  var url1 = "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/6/public/full?alt=json";
+  var url2 = "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/7/public/full?alt=json";
+  var url3 = "https://spreadsheets.google.com/feeds/list/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/8/public/full?alt=json";
+  
+  xmlhttp0.open("GET", url0,true);
+  xmlhttp0.send();
+  xmlhttp1.open("GET", url1,true);
+  xmlhttp1.send();
+  xmlhttp2.open("GET", url2,true);
+  xmlhttp2.send();
+  xmlhttp3.open("GET", url3,true);
+  xmlhttp3.send();
 
 </script>
