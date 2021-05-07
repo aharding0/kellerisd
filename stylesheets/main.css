@@ -39,7 +39,7 @@ input[type="search"]{
   background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 95%;
+  width: 85%;
   font-size: 16px;
   padding: 2px 0px 2px 0px;
   border: 1px solid #ddd;
