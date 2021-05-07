@@ -137,6 +137,7 @@ h2{
   color: red;
 }
 label, table{
+  display: table;
   display: block;
   margin: 15px;
 }
