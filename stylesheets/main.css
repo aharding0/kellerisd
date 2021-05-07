@@ -147,7 +147,7 @@ label>span{
   margin-top: 12px;
   padding-right: 10px;
 }
-input[type="text"], input[type="time"], input[type="email"], select
+input[type="text"], input[type="time"], input[type="email"]
 {
   width: 50%;
   height: 30px;
@@ -156,12 +156,14 @@ input[type="text"], input[type="time"], input[type="email"], select
   border: 1px solid #c19f5f;
   color: #0;
 }
+select[id^='qty']{
+  width: 50px;
+  border: 1px solid #c19f5f;
+  color: #0;
+}
 select{
-  width: 7%;
-  height: 45px;
-  background: #0;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  border: 1px solid #c19f5f;
+  color: #0;
 }
 .Yorder{
   margin-top: 15px;
