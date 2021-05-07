@@ -138,7 +138,6 @@ h2{
 }
 label, table{
   display: table;
-  display: block;
   margin: 15px;
 }
 label>span{
