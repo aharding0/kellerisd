@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+{
+  box-sizing: border-box;
+}
+
+input[type="search"]{
+    width:70%;
+  }
+  
+  textarea{
+  display:block;
+}
+
+#divorder{
+  display:inline-block;
+  position:relative;
+}
+
+.googlecontainer {
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 85%;
+  font-size: 16px;
+  padding: 2px 0px 2px 0px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#gsheet {
+  border-collapse: collapse;
+  width: 85%;
+  border: 1px solid #ddd;
+  font-size: 10px;
+}
+
+#gsheet th, #gsheet td {
+  text-align: left;
+  padding: 5px;
+}
+
+#gsheet tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#gsheet tr.header, #gsheet tr:hover {
+  background-color: #f1f1f1;
+}
+
+body{
+  background-color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #262626;
+  margin: 5% 0;
+  font-size: 15px;
+  
+}
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flavors{
+  padding-top: 50px;
+}
+
+@media (min-width: 1200px)
+{
+  .container{
+    max-width: 1140px;
+  }
+}
+.d-flex{
+  display: flex;
+  flex-direction: row;
+  background: #f6f6f6;
+  border-radius: 0 0 5px 5px;
+  padding: 25px;
+}
+form{
+  flex: 4;
+}
+.Yorder{
+  flex: 2;
+}
+select option {
+    margin: 40px;
+    background: white;
+    color: #0;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+h1{
+  padding: 0;
+  width: 35;
+  display:inline;
+  margin-left:30px;
+  text-align:center;
+}
+.title{
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #5195A8), color-stop(100, #70EAFF));
+  background: -moz-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -ms-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: -o-linear-gradient(top left, #5195A8 0%, #70EAFF 100%);
+  background: linear-gradient(to bottom right, #5195A8 0%, #70EAFF 100%);
+  border-radius:5px 5px 0 0 ;
+  padding: 20px;
+  color: #f6f6f6;
+}
+h2{
+  margin: 0;
+  padding-left: 15px; 
+}
+.required{
+  color: red;
+}
+label, table{
+  display: block;
+  margin: 15px;
+}
+label>span{
+  float: left;
+  width: 17%;
+  margin-top: 12px;
+  padding-right: 10px;
+}
+input[type="text"], input[type="time"], input[type="email"], select
+{
+  width: 50%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #c19f5f;
+  color: #0;
+}
+select{
+  width: 7%;
+  height: 45px;
+  background: #0;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.Yorder{
+  margin-top: 15px;
+  height: 600px;
+  padding: 20px;
+  border: 1px solid #dadada;
+}
+table{
+  margin: 0;
+  padding: 0;
+}
+
+th{
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+tr>td:nth-child(1){
+  text-align: left;
+  color: #0;
+}
+tr>td:nth-child(2){
+  text-align: left;
+  color: #ff0000;
+}
+td{
+  border-bottom: 1px solid #fffff;
+  padding: 25px 25px 25px 0;
+}
+
+p{
+  display: block;
+  color: #888;
+  margin: 0;
+  padding-left: 25px;
+}
+.Yorder>div{
+  padding: 15px 0; 
+}
+
+input[type="submit"]
+{
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background: #c19f5f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+input[type="checkbox"]
+{
+  width:24px;
+  height:24px;
+  position:relative;
+  top:-40px
+}
+
+
+.button{
+  width: 50%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #52ad9c;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+}
+.button:hover{
+  cursor: pointer;
+  background: #428a7d;
+}
+@media (max-width: 800px) {
+  label>span
+  {
+    
+  }
+  body{
+    font-size: 12px;
+  }
+  #myTable {
+  font-size: 10px;
+}
+  input[type="button"]{
+    margin-left:5px;
+  }
+  input[type="search"]{
+    width:70%;
+  }
+  h1{
+    margin-left: 35%;
+  }
+  input[type="submit"]
+  {
+    width: 90%;
+  }
+  select{
+  width: 65px;
+  height: 25px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+  input[type="text"], input[type="time"], input[type="email"]
+{
+  width: 50%;
+  height: 30px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #c19f5f;
+  color: #0;
+  
+}
+}
+@media (min-width: 801px) {
+input[type="submit"]
+  {
+    width: 70%;
+  }
+  select{
+  width: 75%;
+}
+#entry.619950903{
+  width: 5%;
+}
+
+select option {
+  width:10%;
+  }
+}
+  h1{
+    margin-left: 22%;
+  }
+}
