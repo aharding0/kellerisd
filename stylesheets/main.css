@@ -136,7 +136,11 @@ h2{
 .required{
   color: red;
 }
-label, table{
+label{
+  display: block;
+  margin: 15px;
+}
+table{
   display: table;
   margin: 15px;
 }
