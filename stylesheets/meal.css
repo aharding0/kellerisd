@@ -43,7 +43,8 @@ input[type="search"]{
   font-size: 16px;
   padding: 2px 0px 2px 0px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
+  margin-left: 20px;
+  margin-bottom: 0px;
 }
 
 #gsheet {
@@ -76,10 +77,6 @@ body{
 }
 .container{
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .flavors{
@@ -136,8 +133,12 @@ h2{
 .required{
   color: red;
 }
-label, table{
+label{
   display: block;
+  margin: 15px;
+}
+table{
+  display: table;
   margin: 15px;
 }
 label>span{
@@ -167,10 +168,6 @@ select{
   height: 600px;
   padding: 20px;
   border: 1px solid #dadada;
-}
-table{
-  margin: 0;
-  padding: 0;
 }
 
 th{
@@ -224,7 +221,6 @@ input[type="checkbox"]
   position:relative;
   top:-40px
 }
-
 
 .button{
   width: 50%;
