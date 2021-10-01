@@ -1,5 +1,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css");
 
+div{
+	overflow: hidden;
+}
+
 .page_title h1 {
     color: #c0392b;
     font-weight: 700;
@@ -59,7 +63,6 @@
     position: relative;
     margin-bottom: 75px;
     transition: .3s;
-    overflow: hidden;
 }
 .single_menu:hover img{
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
