@@ -62,115 +62,55 @@
   </div>
 </section>
 <script>
-  let xmlhttp0 = new XMLHttpRequest();
-  var snackitem = [];
-  var snackprice = [];
-  var snackdescription = [];
-  var snackimgsrc = [];
-
-  xmlhttp0.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      let data0 = JSON.parse(this.responseText).feed.entry;
-      let i, j;
-
-      
-      for (i = 0, j = data0.length; i < j; i += 1) {
-        snackitem.push(data0[i]["gsx$item"]["$t"]);
-        snackprice.push(data0[i]["gsx$price"]["$t"]);
-        snackdescription.push(data0[i]["gsx$description"]["$t"]);
-        snackimgsrc.push(data0[i]["gsx$imgsrc"]["$t"]);
-        document.getElementById("snackcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+snackimgsrc[i]+"' alt="+snackitem[i]+"><div class='menu_content'><h4>"+snackitem[i]+"<span>"+snackprice[i]+"</span></h4><p>"+snackdescription[i]+"</p></div></div></div>";
-      }
-      
-    }
-  };
-
-  let xmlhttp1 = new XMLHttpRequest();
-  var breakfastitem = [];
-  var breakfastprice = [];
-  var breakfastdescription = [];
-  var breakfastimgsrc = [];
-
-  xmlhttp1.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      let data1 = JSON.parse(this.responseText).feed.entry;
-      let i, j;
-
-      
-      for (i = 0, j = data1.length; i < j; i += 1) {
-        breakfastitem.push(data1[i]["gsx$item"]["$t"]);
-        breakfastprice.push(data1[i]["gsx$price"]["$t"]);
-        breakfastdescription.push(data1[i]["gsx$description"]["$t"]);
-        breakfastimgsrc.push(data1[i]["gsx$imgsrc"]["$t"]);
-        document.getElementById("breakfastcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+breakfastimgsrc[i]+"' alt="+breakfastitem[i]+"><div class='menu_content'><h4>"+breakfastitem[i]+"<span>"+breakfastprice[i]+"</span></h4><p>"+breakfastdescription[i]+"</p></div></div></div>";
-      }
-      
-    }
-  };
-
-  let xmlhttp2 = new XMLHttpRequest();
-  var mealitem = [];
-  var mealprice = [];
-  var mealdescription = [];
-  var mealimgsrc = [];
-
-  xmlhttp2.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      let data2 = JSON.parse(this.responseText).feed.entry;
-      let i, j;
-
-      
-      for (i = 0, j = data2.length; i < j; i += 1) {
-        mealitem.push(data2[i]["gsx$item"]["$t"]);
-        mealprice.push(data2[i]["gsx$price"]["$t"]);
-        mealdescription.push(data2[i]["gsx$description"]["$t"]);
-        mealimgsrc.push(data2[i]["gsx$imgsrc"]["$t"]);
-        document.getElementById("mealcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+mealimgsrc[i]+"' alt="+mealitem[i]+"><div class='menu_content'><h4>"+mealitem[i]+"<span>"+mealprice[i]+"</span></h4><p>"+mealdescription[i]+"</p></div></div></div>";
-      }
-      
-    }
-  };
-
-  let xmlhttp3 = new XMLHttpRequest();
-  var dessertitem = [];
-  var dessertprice = [];
-  var dessertdescription = [];
-  var dessertimgsrc = [];
-
-  xmlhttp3.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      let data3 = JSON.parse(this.responseText).feed.entry;
-      let i, j;
-
-      
-      for (i = 0, j = data3.length; i < j; i += 1) {
-        dessertitem.push(data3[i]["gsx$item"]["$t"]);
-        dessertprice.push(data3[i]["gsx$price"]["$t"]);
-        dessertdescription.push(data3[i]["gsx$description"]["$t"]);
-        dessertimgsrc.push(data3[i]["gsx$imgsrc"]["$t"]);
-        document.getElementById("dessertcontent").innerHTML += "<div class='col-md-6'><div class='single_menu'><img src='"+dessertimgsrc[i]+"' alt="+dessertitem[i]+"><div class='menu_content'><h4>"+dessertitem[i]+"<span>"+dessertprice[i]+"</span></h4><p>"+dessertdescription[i]+"</p></div></div></div>";
-      }
-      
-    }
-  };
-
-  //var url0 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1751425745";
-  var url1 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1734196859";
-  var url2 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1663725015";
-  var url3 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=26937867";
-	
-  var url0 = 'https://sheets.googleapis.com/v4/spreadsheets/' + '15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y' + '/values/' + 'Snack Menu' + '?alt=json&key=' + 'AIzaSyBq9SNCImZe-7fEnSRQ436exH1lsuLcJpY';
-($.getJSON(url0, 'callback=?')).success(function(data) {
-   xmlhttp0.open("GET", url0,true);
-   xmlhttp0.send();
-};
   
+  var id0 = '15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y';
+  var gid0 = '1751425745';
+  var url0 = 'https://docs.google.com/spreadsheets/d/'+id0+'/gviz/tq?tqx=out:json&tq&gid='+gid0;
+	
+  var id1 = '15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y';
+  var gid1 = '1734196859';
+  var url1 = 'https://docs.google.com/spreadsheets/d/'+id0+'/gviz/tq?tqx=out:json&tq&gid='+gid1;
+  
+  var id2 = '15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y';
+  var gid2 = '1663725015';
+  var url2 = 'https://docs.google.com/spreadsheets/d/'+id0+'/gviz/tq?tqx=out:json&tq&gid='+gid2;
+	
+  var id3 = '15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y';
+  var gid3 = '26937867';
+  var url3 = 'https://docs.google.com/spreadsheets/d/'+id0+'/gviz/tq?tqx=out:json&tq&gid='+gid3;
  
-  xmlhttp1.open("GET", url1,true);
-  xmlhttp1.send();
-  xmlhttp2.open("GET", url2,true);
-  xmlhttp2.send();
-  xmlhttp3.open("GET", url3,true);
-  xmlhttp3.send();
+fetch(url0)
+  .then(response => response.text())
+  .then(data => document.getElementById("snackcontent").innerHTML=myItems(data.match(/(?<="table":).*(?=}\);)/g)[0]) 
+  );
+	
+fetch(url1)
+  .then(response => response.text())
+  .then(data => document.getElementById("breakfastcontent").innerHTML=myItems(data.match(/(?<="table":).*(?=}\);)/g)[0]) 
+  );
+	
+fetch(url2)
+  .then(response => response.text())
+  .then(data => document.getElementById("mealcontent").innerHTML=myItems(data.match(/(?<="table":).*(?=}\);)/g)[0]) 
+  );
+	
+fetch(url3)
+  .then(response => response.text())
+  .then(data => document.getElementById("dessertcontent").innerHTML=myItems(data.match(/(?<="table":).*(?=}\);)/g)[0]) 
+  );
+	
+function myItems(jsonString){
+  var json = JSON.parse(jsonString);
+  var table = '<table>'
+  for (var i=0;i<json.rows.length;i++){
+    var item = json.rows[i].c[0].v;
+    var price = json.rows[i].c[1].v;
+    var description = json.rows[i].c[2].v;
+    var imgsrc = json.rows[i].c[3].v;
+    table += "<div class='col-md-6'><div class='single_menu'><img src='"+imgsrc+"' alt="+item+"><div class='menu_content'><h4>"+item+"<span>"+"$"+price.toFixed(2)+"</span></h4><p>"+description+"</p></div></div></div>";
+  }
+  table += '</table>'
+  return table
+}
 
 </script>
