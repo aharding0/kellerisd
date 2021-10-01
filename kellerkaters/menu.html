@@ -154,13 +154,18 @@
     }
   };
 
-  var url0 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1751425745";
+  //var url0 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1751425745";
   var url1 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1734196859";
   var url2 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=1663725015";
   var url3 = "https://docs.google.com/spreadsheets/d/15gT8DzszGlCgqA4QOU_rVssCSEWGxniuBiqDSbOwI8Y/gviz/tq?tqx=out:json&gid=26937867";
+	
+  var url0 = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreadsheet_id + '/values/' + tab_name + '?alt=json&key=' + api_key;
+($.getJSON(url0, 'callback=?')).success(function(data) {
+   xmlhttp0.open("GET", url0,true);
+   xmlhttp0.send();
+};
   
-  xmlhttp0.open("GET", url0,true);
-  xmlhttp0.send();
+ 
   xmlhttp1.open("GET", url1,true);
   xmlhttp1.send();
   xmlhttp2.open("GET", url2,true);
