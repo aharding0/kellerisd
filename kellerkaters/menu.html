@@ -107,7 +107,7 @@ function myItems(jsonString){
     var price = json.rows[i].c[1].v;
     var description = json.rows[i].c[2].v;
     var imgsrc = json.rows[i].c[3].v;
-    table += "<div class='col-md-6'><div class='single_menu'><img src='"+imgsrc+"' alt="+item+"><div class='menu_content'><h4>"+item+"<span>"+"$"+price.toFixed(2)+"</span></h4><p>"+description+"</p></div></div></div>";
+    table += "<div style='overflow: hidden';class='col-md-6'><div class='single_menu'><img src='"+imgsrc+"' alt="+item+"><div class='menu_content'><h4>"+item+"<span>"+"$"+price.toFixed(2)+"</span></h4><p>"+description+"</p></div></div></div>";
   }
   table += '</table>'
   return table
